@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" type="image/png" href="../assets/img/favicon.ico">
+   <link rel="apple-touch-icon" href="../assets/img/favicon.ico">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+   <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+   <script src="../assets/js/tailwind.config.js"></script>
+   <link rel="stylesheet" href="../assets/css/styles.css?v=50">
+   <title>Stationnement de Carcassonne · Full stack · SIG · Johan TASSART</title>
+</head>
+<body class="bg-paper text-ink font-sans antialiased text-[.95rem] lg:text-base">
+
+   <!--==================== BARRE STICKY (claire) ====================-->
+   <header class="fixed top-0 inset-x-0 z-50 bg-paper/85 backdrop-blur-[14px] border-b border-line">
+      <div class="container flex items-center justify-between h-14">
+         <a href="../index.html" class="flex items-center gap-2.5 font-bold tracking-tight text-[1.05rem]"><img src="../assets/img/image_portfolio.png" alt="" class="w-7 h-7 object-contain"><span>Johan <span class="text-ash">TASSART</span></span></a>
+         <a href="../index.html#projects" class="inline-flex items-center gap-2 rounded-full border border-line px-4 py-2 text-[.85rem] font-medium text-ink hover:bg-black/[.04] transition-colors"><i class="ri-arrow-left-line"></i> Retour aux projets</a>
+      </div>
+   </header>
+
+   <main class="overflow-hidden">
+
+      <!--==================== HERO BANNIÈRE (image + titre superposé) ====================-->
+      <section id="top" class="relative overflow-hidden h-[56vh] min-h-[400px] lg:h-[62vh] flex items-end mt-14">
+         <img src="../assets/img/projet-stationnement.jpg" alt="Stationnement de Carcassonne" class="absolute inset-0 w-full h-full object-cover">
+         <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/15"></div>
+         <div class="container relative pb-9 lg:pb-12">
+            <div class="flex flex-wrap gap-2 mb-5">
+               <span class="inline-flex items-center rounded-full bg-white/15 backdrop-blur-sm border border-white/25 px-3 py-1 text-[.64rem] font-semibold uppercase tracking-[.1em] text-white">Projet BUT · SAE</span>
+               <span class="inline-flex items-center rounded-full bg-white/15 backdrop-blur-sm border border-white/25 px-3 py-1 text-[.64rem] font-semibold uppercase tracking-[.1em] text-white">Ville de Carcassonne</span>
+               <span class="inline-flex items-center rounded-full bg-white/15 backdrop-blur-sm border border-white/25 px-3 py-1 text-[.64rem] font-semibold uppercase tracking-[.1em] text-white">En cours</span>
+            </div>
+            <h1 class="font-display font-semibold tracking-[-.04em] leading-[.95] text-[clamp(2.2rem,5.5vw,4.2rem)] text-white max-w-[900px] mb-4">Stationnement de Carcassonne</h1>
+            <p class="text-white/75 text-[1.05rem] lg:text-[1.15rem] leading-relaxed max-w-[660px] font-light">Application web cartographique pour la gestion du stationnement de la Ville de Carcassonne : carte interactive, tableau de bord d'indicateurs et administration des données, en remplacement d'une solution ESRI propriétaire.</p>
+         </div>
+      </section>
+
+      <!--==================== SPECS / FAITS CLÉS ====================-->
+      <section class="bg-paper border-b border-line">
+         <div class="container grid grid-cols-2 sd:grid-cols-4 gap-y-6 py-7 lg:py-9">
+            <div><p class="font-display font-bold text-[1.25rem] lg:text-[1.45rem] leading-none">Leaflet</p><p class="text-ash text-[.76rem] mt-1.5 uppercase tracking-[.08em] font-mono">Cartographie web</p></div>
+            <div><p class="font-display font-bold text-[1.25rem] lg:text-[1.45rem] leading-none">PostGIS</p><p class="text-ash text-[.76rem] mt-1.5 uppercase tracking-[.08em] font-mono">Base spatiale</p></div>
+            <div><p class="font-display font-bold text-[1.25rem] lg:text-[1.45rem] leading-none">PHP / AJAX</p><p class="text-ash text-[.76rem] mt-1.5 uppercase tracking-[.08em] font-mono">Back-end</p></div>
+            <div><p class="font-display font-bold text-[1.25rem] lg:text-[1.45rem] leading-none text-grad">En cours</p><p class="text-ash text-[.76rem] mt-1.5 uppercase tracking-[.08em] font-mono">Statut</p></div>
+         </div>
+      </section>
+
+      <!--==================== VIDÉO (démonstration) ====================-->
+      <section class="bg-paper pt-12 lg:pt-16">
+         <div class="container">
+            <div class="mb-6">
+               <p class="eyebrow text-grad text-[.72rem] font-semibold uppercase mb-2">Démonstration</p>
+               <h2 class="font-display font-semibold tracking-[-.02em] text-[1.5rem] lg:text-[1.9rem]">Vidéo du projet</h2>
+               <p class="text-ash text-[1rem] leading-relaxed mt-2 max-w-[680px]">Une démonstration de l'application (carte, tableau de bord et administration) sera ajoutée prochainement.</p>
+            </div>
+            <div class="relative rounded-2xl overflow-hidden border border-line bg-night max-w-[940px] mx-auto lg:mx-0 aspect-video">
+               <img src="../assets/img/projet-stationnement.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-30">
+               <div class="absolute inset-0 grid place-items-center text-center px-6">
+                  <div>
+                     <div class="w-14 h-14 rounded-full bg-white/10 border border-white/25 grid place-items-center mx-auto mb-3 backdrop-blur-sm"><i class="ri-play-fill text-white text-2xl ml-0.5"></i></div>
+                     <p class="text-white font-semibold text-[1rem]">Démonstration à venir</p>
+                     <p class="text-white/60 text-[.85rem] mt-1">Projet en cours</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!--==================== PROBLÈME / SOLUTION / IMPACT ====================-->
+      <section class="bg-paper pt-12 lg:pt-16">
+         <div class="container grid gap-5 md:grid-cols-3">
+            <div class="card-light p-6">
+               <div class="w-10 h-10 rounded-xl bg-g2/10 grid place-items-center mb-4"><i class="ri-error-warning-line text-g2 text-xl"></i></div>
+               <p class="text-[.72rem] font-semibold uppercase tracking-[.1em] text-ash mb-2">Problème</p>
+               <p class="text-ink/80 text-[.95rem] leading-relaxed">La Ville de Carcassonne gère son stationnement avec une solution ESRI propriétaire, sous abonnement et difficile à faire évoluer en interne.</p>
+            </div>
+            <div class="card-light p-6">
+               <div class="w-10 h-10 rounded-xl bg-g1/10 grid place-items-center mb-4"><i class="ri-lightbulb-flash-line text-g1 text-xl"></i></div>
+               <p class="text-[.72rem] font-semibold uppercase tracking-[.1em] text-ash mb-2">Solution</p>
+               <p class="text-ink/80 text-[.95rem] leading-relaxed">Une application web sur-mesure (PHP, Leaflet, PostgreSQL / PostGIS) qui reprend les fonctionnalités utiles : carte interactive, tableau de bord et administration des données, sans dépendance propriétaire.</p>
+            </div>
+            <div class="card-light p-6">
+               <div class="w-10 h-10 rounded-xl bg-emerald-500/10 grid place-items-center mb-4"><i class="ri-line-chart-line text-emerald-600 text-xl"></i></div>
+               <p class="text-[.72rem] font-semibold uppercase tracking-[.1em] text-ash mb-2">Impact</p>
+               <p class="text-ink/80 text-[.95rem] leading-relaxed">Une application maîtrisée par la collectivité, sans abonnement, pensée pour un usage réel par les services de la Ville.</p>
+            </div>
+         </div>
+      </section>
+
+      <!--==================== CONTENU : détail central + sidebar ====================-->
+      <section class="bg-paper pt-12 pb-20 lg:pt-16 lg:pb-28">
+         <div class="container grid gap-x-12 gap-y-12 lg:grid-cols-[minmax(0,1fr)_320px]">
+
+            <!-- Détail central -->
+            <div class="flex flex-col gap-y-10 lg:gap-y-12 min-w-0">
+               <div>
+                  <h2 class="font-display font-semibold tracking-[-.02em] text-[1.5rem] lg:text-[1.75rem] mb-4">À propos du projet</h2>
+                  <p class="text-ash text-[1rem] leading-relaxed">Projet de BUT (SAE VCOD), réalisé en partenariat avec la Ville de Carcassonne. L'objectif est de remplacer l'application ESRI existante par une application web cartographique sur-mesure, pour consulter, analyser et administrer les données de stationnement de la ville. Elle est conçue pour un usage réel par les services municipaux : sécurité, qualité des données et performances font partie du cahier des charges.</p>
+               </div>
+               <div>
+                  <p class="eyebrow text-grad text-[.72rem] font-semibold uppercase mb-3">Données</p>
+                  <p class="text-ash text-[1rem] leading-relaxed mb-4">Les données géographiques sont fournies par la Ville : places de stationnement et leurs catégories, stations Cyclolibre, horodateurs, zonage tarifaire et zones de stationnement. Elles sont importées et stockées dans PostgreSQL / PostGIS, puis servies à la carte au format GeoJSON.</p>
+                  <div class="flex flex-wrap gap-2"><span class="soft-chip-light">PostGIS</span><span class="soft-chip-light">GeoJSON</span><span class="soft-chip-light">Données Ville de Carcassonne</span></div>
+               </div>
+               <div>
+                  <p class="eyebrow text-grad text-[.72rem] font-semibold uppercase mb-4">Fonctionnalités</p>
+                  <ul class="flex flex-col gap-3">
+                     <li class="flex gap-3 text-ash text-[1rem] leading-relaxed"><i class="ri-check-line text-g1 text-lg mt-0.5 shrink-0"></i><span>Carte interactive (Leaflet) : couches activables (places, Cyclolibre, horodateurs, zones, zonage tarifaire), légende, popups d'information et filtres combinables (adresse, type, zone, quartier).</span></li>
+                     <li class="flex gap-3 text-ash text-[1rem] leading-relaxed"><i class="ri-check-line text-g1 text-lg mt-0.5 shrink-0"></i><span>Tableau de bord : indicateurs calculés en direct depuis PostGIS (total VL, répartition par type, zone et quartier, horodateurs, Cyclolibre...).</span></li>
+                     <li class="flex gap-3 text-ash text-[1rem] leading-relaxed"><i class="ri-check-line text-g1 text-lg mt-0.5 shrink-0"></i><span>Mode administration : ajout, modification et suppression des entités (points, lignes, polygones), validation des saisies et authentification sécurisée (requêtes préparées).</span></li>
+                     <li class="flex gap-3 text-ash text-[1rem] leading-relaxed"><i class="ri-check-line text-g1 text-lg mt-0.5 shrink-0"></i><span>Échanges carte &harr; serveur en AJAX, au format JSON / GeoJSON.</span></li>
+                     <li class="flex gap-3 text-ash text-[1rem] leading-relaxed"><i class="ri-check-line text-g1 text-lg mt-0.5 shrink-0"></i><span>Accès intégré aux services Cyclolibre et Chargemap, centrés sur Carcassonne.</span></li>
+                  </ul>
+               </div>
+               <div>
+                  <p class="eyebrow text-grad text-[.72rem] font-semibold uppercase mb-3">Modélisation des données</p>
+                  <p class="text-ash text-[1rem] leading-relaxed">Les données fournies par la Ville (places, zones, horodateurs, Cyclolibre) sont modélisées puis importées dans PostgreSQL / PostGIS. Le modèle s'appuie sur des référentiels pour fiabiliser les libellés (types de place, types de stationnement, quartiers, zones), un identifiant unique et stable par objet, et des géométries stockées avec un système de coordonnées déclaré. Chaque indicateur du tableau de bord est documenté par sa règle de calcul : somme des quantités de places, et non simple comptage d'objets.</p>
+               </div>
+               <div>
+                  <p class="eyebrow text-grad text-[.72rem] font-semibold uppercase mb-3">Démarche technique</p>
+                  <p class="text-ash text-[1rem] leading-relaxed">Un back-end PHP expose une API qui interroge PostgreSQL / PostGIS et renvoie du JSON / GeoJSON. Le front-end (HTML / Tailwind) affiche une carte Leaflet (couches, légende, popups) pilotée en JavaScript et AJAX. Les données sont préparées et importées dans PostGIS avec les index nécessaires, pour garder des temps d'affichage et de filtrage fluides même sur l'ensemble des places.</p>
+               </div>
+               <div>
+                  <p class="eyebrow text-grad text-[.72rem] font-semibold uppercase mb-4">Compétences démontrées</p>
+                  <div class="flex flex-wrap gap-2.5">
+                     <span class="soft-chip-light">Développement full stack</span><span class="soft-chip-light">Cartographie web (Leaflet)</span><span class="soft-chip-light">SIG / PostGIS</span><span class="soft-chip-light">Conception de base de données</span><span class="soft-chip-light">API PHP / AJAX</span><span class="soft-chip-light">Sécurité applicative</span>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="flex flex-col gap-4 lg:sticky lg:top-[72px] lg:self-start">
+               <div class="card-light p-5">
+                  <p class="text-[.68rem] font-semibold uppercase tracking-[.1em] text-ash mb-3">Code source</p>
+                  <div class="flex items-center gap-2.5 text-ink/80 text-[.92rem]"><i class="ri-time-line text-g1 text-lg shrink-0"></i> Projet en cours (BUT SAE 2026-2027).</div>
+               </div>
+               <div class="card-light p-5">
+                  <p class="text-[.68rem] font-semibold uppercase tracking-[.1em] text-ash mb-3">Stack</p>
+                  <div class="flex flex-wrap gap-x-4 gap-y-3">
+                     <span class="inline-flex items-center gap-2"><img src="../assets/img/tailwind-css-2.svg" alt="Tailwind" class="w-5 h-5 object-contain"><span class="text-[.85rem] font-medium text-ink">Tailwind</span></span>
+                     <span class="inline-flex items-center gap-2"><img src="../assets/img/html-1.svg" alt="HTML" class="w-5 h-5 object-contain"><span class="text-[.85rem] font-medium text-ink">HTML</span></span>
+                     <span class="inline-flex items-center gap-2"><img src="../assets/img/javascript-r.svg" alt="JavaScript" class="w-5 h-5 object-contain"><span class="text-[.85rem] font-medium text-ink">JavaScript</span></span>
+                     <span class="inline-flex items-center gap-2"><img src="../assets/img/php.svg" alt="PHP" class="w-5 h-5 object-contain"><span class="text-[.85rem] font-medium text-ink">PHP</span></span>
+                     <span class="inline-flex items-center gap-2"><img src="../assets/img/postgre.png" alt="PostgreSQL" class="w-5 h-5 object-contain"><span class="text-[.85rem] font-medium text-ink">PostgreSQL</span></span>
+                     <span class="inline-flex items-center gap-2"><i class="ri-map-2-line text-[1.15rem] text-g1"></i><span class="text-[.85rem] font-medium text-ink">PostGIS</span></span>
+                  </div>
+                  <p class="text-[.72rem] text-ash mt-3">+ Leaflet, AJAX / GeoJSON, PostGIS</p>
+               </div>
+               <div class="card-light p-5">
+                  <p class="text-[.68rem] font-semibold uppercase tracking-[.1em] text-ash mb-4">Informations</p>
+                  <dl class="flex flex-col gap-y-3 text-[.9rem]">
+                     <div class="flex items-center justify-between gap-4"><dt class="text-ash">Type</dt><dd class="font-medium text-right">Projet BUT · SAE</dd></div>
+                     <div class="flex items-center justify-between gap-4"><dt class="text-ash">Partenaire</dt><dd class="font-medium text-right">Ville de Carcassonne</dd></div>
+                     <div class="flex items-center justify-between gap-4"><dt class="text-ash">Rôle</dt><dd class="font-medium text-right">Développement full stack</dd></div>
+                     <div class="flex items-center justify-between gap-4"><dt class="text-ash">Période</dt><dd class="font-medium text-right">2026 – 2027</dd></div>
+                     <div class="flex items-center justify-between gap-4"><dt class="text-ash">Statut</dt><dd class="text-g1 font-medium text-right">En cours</dd></div>
+                  </dl>
+               </div>
+            </aside>
+
+         </div>
+      </section>
+
+      <!--==================== AUTRES PROJETS ====================-->
+      <section class="bg-paper border-t border-line pt-14 pb-20 lg:pt-16 lg:pb-24">
+         <div class="container">
+            <div class="flex items-end justify-between gap-5 mb-8">
+               <h2 class="font-display font-semibold tracking-[-.03em] text-[clamp(1.6rem,3.4vw,2.3rem)]">Autres projets</h2>
+               <a href="../index.html#projects" class="shrink-0 inline-flex items-center gap-2 font-medium text-ink underline decoration-g1 decoration-2 underline-offset-[6px] hover:text-g1 transition-colors text-[.92rem]">Tous les projets</a>
+            </div>
+            <div class="grid gap-5 sd:grid-cols-3">
+               <a href="cartographie-randonnees.html" class="group relative block rounded-2xl overflow-hidden border border-line aspect-[16/10]">
+                  <img src="../assets/img/randonnee-background.webp" alt="Cartographie des randonnées" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.05]">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+                  <div class="absolute bottom-0 left-0 p-5">
+                     <p class="text-[.62rem] font-mono uppercase tracking-[.12em] text-g1 mb-1">Full stack · SVG</p>
+                     <p class="text-white font-semibold text-[1.1rem]">Cartographie des randonnées</p>
+                  </div>
+               </a>
+               <a href="suivi-performances.html" class="group relative block rounded-2xl overflow-hidden border border-line aspect-[16/10]">
+                  <img src="../assets/img/fond-exp-fftri.webp" alt="Suivi des performances" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.05]">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+                  <div class="absolute bottom-0 left-0 p-5">
+                     <p class="text-[.62rem] font-mono uppercase tracking-[.12em] text-g1 mb-1">FFTri · Django</p>
+                     <p class="text-white font-semibold text-[1.1rem]">Suivi des performances</p>
+                  </div>
+               </a>
+               <a href="accidents-velo.html" class="group relative block rounded-2xl overflow-hidden border border-line aspect-[16/10]">
+                  <img src="../assets/img/accident-velo.webp" alt="Accidents à vélo" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.05]">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+                  <div class="absolute bottom-0 left-0 p-5">
+                     <p class="text-[.62rem] font-mono uppercase tracking-[.12em] text-g1 mb-1">Data · SIG</p>
+                     <p class="text-white font-semibold text-[1.1rem]">Accidents à vélo</p>
+                  </div>
+               </a>
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <!--==================== FOOTER ====================-->
+   <footer class="relative overflow-hidden bg-night text-cloud border-t border-edge pt-16 pb-14">
+      <div aria-hidden="true" class="dash-field pointer-events-none absolute inset-x-0 bottom-0 h-[240px] -z-10 opacity-40 bg-[radial-gradient(70%_120%_at_50%_100%,#ff7a1a_0%,#ff2d55_32%,transparent_68%)]"></div>
+      <div class="container flex flex-col items-center gap-y-7">
+         <a href="../index.html#home" class="font-bold text-[1.6rem] tracking-tight">Johan<span class="text-grad"> TASSART</span></a>
+         <ul class="flex items-center gap-x-6 sd:gap-x-9 text-[.9rem]">
+            <li><a href="../index.html#home" class="text-fog transition-colors duration-[.3s] hover:text-cloud">Accueil</a></li>
+            <li><a href="../index.html#competences" class="text-fog transition-colors duration-[.3s] hover:text-cloud">Compétences</a></li>
+            <li><a href="../index.html#projects" class="text-fog transition-colors duration-[.3s] hover:text-cloud">Projets</a></li>
+            <li><a href="../index.html#experience" class="text-fog transition-colors duration-[.3s] hover:text-cloud">Parcours</a></li>
+         </ul>
+         <div class="flex items-center gap-x-3">
+            <a href="https://www.linkedin.com/in/johan-tassart-39744821a/" target="_blank" class="w-10 h-10 border border-edge text-cloud text-xl rounded-full grid place-items-center transition-colors hover:bg-white hover:text-night" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://gitlab.com/JohanTASSART" target="_blank" class="w-10 h-10 border border-edge text-cloud text-xl rounded-full grid place-items-center transition-colors hover:bg-white hover:text-night" aria-label="GitLab"><i class="fa-brands fa-gitlab"></i></a>
+            <a href="https://coddy.tech/user/aKT2mEdOvWOMSBfDnumaO4ARbiA2" target="_blank" class="w-10 h-10 border border-edge rounded-full grid place-items-center transition-colors hover:bg-white" aria-label="Coddy"><img src="../assets/img/coddy%20tech.svg" alt="Coddy" class="h-6 w-6 object-contain"></a>
+         </div>
+         <span class="block mt-4 text-center text-[.82rem] text-fog">Portfolio · Johan TASSART</span>
+      </div>
+   </footer>
+
+   <a href="#top" class="scrollup fixed right-4 xl:right-16 -bottom-1/2 bg-white border border-line inline-flex p-2 text-ink text-xl rounded-[.75rem] shadow-[0_8px_24px_rgba(0,0,0,.15)] z-10 [transition:bottom_.4s,transform_.4s] hover:-translate-y-2" id="scroll-up">
+      <i class="ri-arrow-up-line"></i>
+   </a>
+
+   <script src="../assets/js/main.js?v=30"></script>
+</body>
+</html>

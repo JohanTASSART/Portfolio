@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" type="image/png" href="../assets/img/favicon.ico">
+   <link rel="apple-touch-icon" href="../assets/img/favicon.ico">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+   <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+   <script src="../assets/js/tailwind.config.js"></script>
+   <link rel="stylesheet" href="../assets/css/styles.css?v=50">
+   <style>
+      .hero-slide { opacity: 0; transition: opacity 1.1s ease; }
+      .hero-slide.is-active { opacity: 1; }
+      .hero-dot { width: 8px; height: 8px; border-radius: 9999px; background: rgba(255,255,255,.5); transition: width .3s, background-color .3s; }
+      .hero-dot.is-active { width: 22px; background: #fff; }
+      .vitem.is-active { border-color: #ff7a1a; background: rgba(255,122,26,.06); }
+   </style>
+   <title>Suivi des performances · FFTri · Johan TASSART</title>
+</head>
+<body class="bg-paper text-ink font-sans antialiased text-[.95rem] lg:text-base">
+
+   <!--==================== BARRE STICKY (claire) ====================-->
+   <header class="fixed top-0 inset-x-0 z-50 bg-paper/85 backdrop-blur-[14px] border-b border-line">
+      <div class="container flex items-center justify-between h-14">
+         <a href="../index.html" class="flex items-center gap-2.5 font-bold tracking-tight text-[1.05rem]"><img src="../assets/img/image_portfolio.png" alt="" class="w-7 h-7 object-contain"><span>Johan <span class="text-ash">TASSART</span></span></a>
+         <a href="../index.html#projects" class="inline-flex items-center gap-2 rounded-full border border-line px-4 py-2 text-[.85rem] font-medium text-ink hover:bg-black/[.04] transition-colors"><i class="ri-arrow-left-line"></i> Retour aux projets</a>
+      </div>
+   </header>
+
+   <main class="overflow-hidden">
+
+      <!--==================== HERO BANNIÈRE (carrousel d'images) ====================-->
+      <section id="top" class="relative overflow-hidden h-[56vh] min-h-[400px] lg:h-[62vh] flex items-end mt-14">
+         <div class="absolute inset-0">
+            <img src="../assets/img/fond-exp-fftri.webp" alt="" class="hero-slide is-active absolute inset-0 w-full h-full object-cover">
+            <img src="../assets/img/image_paratriathlon.jpg" alt="" class="hero-slide absolute inset-0 w-full h-full object-cover">
+            <img src="../assets/img/image_velo.webp" alt="" class="hero-slide absolute inset-0 w-full h-full object-cover">
+         </div>
+         <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/10"></div>
+         <div class="container relative pb-9 lg:pb-12">
+            <div class="flex flex-wrap gap-2 mb-5">
+               <span class="inline-flex items-center rounded-full bg-white/15 backdrop-blur-sm border border-white/25 px-3 py-1 text-[.64rem] font-semibold uppercase tracking-[.1em] text-white">Alternance</span>
+               <span class="inline-flex items-center rounded-full bg-white/15 backdrop-blur-sm border border-white/25 px-3 py-1 text-[.64rem] font-semibold uppercase tracking-[.1em] text-white">France.Sport</span>
+               <span class="inline-flex items-center rounded-full bg-white/15 backdrop-blur-sm border border-white/25 px-3 py-1 text-[.64rem] font-semibold uppercase tracking-[.1em] text-white">Django</span>
+               <span class="inline-flex items-center rounded-full bg-white/15 backdrop-blur-sm border border-white/25 px-3 py-1 text-[.64rem] font-semibold uppercase tracking-[.1em] text-white">Data Engineering</span>
+            </div>
+            <h1 class="font-display font-semibold tracking-[-.04em] leading-[.95] text-[clamp(2.2rem,5.5vw,4.2rem)] text-white max-w-[900px] mb-4">Suivi des performances</h1>
+            <p class="text-white/75 text-[1.05rem] lg:text-[1.15rem] leading-relaxed max-w-[640px] font-light">Application Django pour centraliser, analyser et visualiser les résultats internationaux de triathlon, adossée à un entrepôt de données alimenté par un pipeline automatisé.</p>
+         </div>
+         <div class="absolute bottom-5 right-6 lg:right-12 z-10 flex gap-2">
+            <button class="hero-dot is-active" aria-label="Image 1"></button>
+            <button class="hero-dot" aria-label="Image 2"></button>
+            <button class="hero-dot" aria-label="Image 3"></button>
+         </div>
+      </section>
+
+      <!--==================== SPECS / FAITS CLÉS ====================-->
+      <section class="bg-paper border-b border-line">
+         <div class="container grid grid-cols-2 sd:grid-cols-4 gap-y-6 py-7 lg:py-9">
+            <div><p class="font-display font-bold text-[1.25rem] lg:text-[1.45rem] leading-none">Django</p><p class="text-ash text-[.76rem] mt-1.5 uppercase tracking-[.08em] font-mono">Framework</p></div>
+            <div><p class="font-display font-bold text-[1.25rem] lg:text-[1.45rem] leading-none">SQL Server</p><p class="text-ash text-[.76rem] mt-1.5 uppercase tracking-[.08em] font-mono">Entrepôt</p></div>
+            <div><p class="font-display font-bold text-[1.25rem] lg:text-[1.45rem] leading-none">Médaillon</p><p class="text-ash text-[.76rem] mt-1.5 uppercase tracking-[.08em] font-mono">Architecture</p></div>
+            <div><p class="font-display font-bold text-[1.25rem] lg:text-[1.45rem] leading-none text-grad">En cours</p><p class="text-ash text-[.76rem] mt-1.5 uppercase tracking-[.08em] font-mono">Statut</p></div>
+         </div>
+      </section>
+
+      <style>
+         .vitem .vplay { transition: opacity .2s; }
+         .vitem.is-active { border-color: #ff7a1a; background: rgba(255,122,26,.06); }
+         .vitem.is-active .vplay { opacity: 0; }
+      </style>
+      <!--==================== VIDÉOS (lecteur + playlist) ====================-->
+      <section class="bg-paper pt-12 lg:pt-16">
+         <div class="container">
+            <div class="mb-6">
+               <p class="eyebrow text-grad text-[.72rem] font-semibold uppercase mb-2">Démonstration</p>
+               <h2 class="font-display font-semibold tracking-[-.02em] text-[1.5rem] lg:text-[1.9rem]">Vidéos du projet</h2>
+               <p class="text-ash text-[1rem] leading-relaxed mt-2 max-w-[680px]">Parcours des principales fonctionnalités de l'application.</p>
+            </div>
+            <div class="grid gap-6 lg:grid-cols-[minmax(0,1fr)_340px]">
+               <div class="rounded-2xl overflow-hidden border border-line bg-black shadow-[0_20px_60px_-30px_rgba(0,0,0,.5)] self-start">
+                  <video id="vplayer" controls playsinline preload="metadata" class="w-full aspect-video object-contain bg-black">
+                     <source id="vsource" src="../assets/video/Connexion et portail.mp4#t=0.1" type="video/mp4">
+                     Votre navigateur ne peut pas lire cette vidéo.
+                  </video>
+               </div>
+               <div class="flex flex-col gap-3">
+                  <p class="text-ash text-[.78rem] uppercase tracking-[.08em] font-mono">5 vidéos</p>
+                  <div id="vplaylist" class="flex flex-col gap-2.5">
+                     <button class="vitem is-active flex items-center gap-3 w-full text-left p-2.5 rounded-xl border border-line hover:border-g1/50 transition-colors" data-src="../assets/video/Connexion et portail.mp4">
+                        <span class="relative shrink-0 w-[108px] aspect-video rounded-lg overflow-hidden bg-black grid place-items-center">
+                           <video class="w-full h-full object-cover pointer-events-none" muted playsinline preload="metadata" src="../assets/video/Connexion et portail.mp4#t=0.5"></video>
+                           <span class="absolute top-1 left-1 text-[.56rem] font-mono font-bold text-white bg-black/60 rounded px-1 leading-[1.5]">01</span>
+                           <span class="vplay absolute inset-0 grid place-items-center bg-black/15"><i class="ri-play-circle-fill text-white text-2xl"></i></span>
+                        </span>
+                        <span class="min-w-0">
+                           <span class="block font-semibold text-[.92rem] leading-tight">Connexion et portail</span>
+                           <span class="block text-ash text-[.8rem] mt-0.5">Authentification et accueil</span>
+                        </span>
+                     </button>
+                     <button class="vitem flex items-center gap-3 w-full text-left p-2.5 rounded-xl border border-line hover:border-g1/50 transition-colors" data-src="../assets/video/Résultats de course.mp4">
+                        <span class="relative shrink-0 w-[108px] aspect-video rounded-lg overflow-hidden bg-black grid place-items-center">
+                           <video class="w-full h-full object-cover pointer-events-none" muted playsinline preload="metadata" src="../assets/video/Résultats de course.mp4#t=0.5"></video>
+                           <span class="absolute top-1 left-1 text-[.56rem] font-mono font-bold text-white bg-black/60 rounded px-1 leading-[1.5]">02</span>
+                           <span class="vplay absolute inset-0 grid place-items-center bg-black/15"><i class="ri-play-circle-fill text-white text-2xl"></i></span>
+                        </span>
+                        <span class="min-w-0">
+                           <span class="block font-semibold text-[.92rem] leading-tight">Résultats de course</span>
+                           <span class="block text-ash text-[.8rem] mt-0.5">Résultats d'une épreuve</span>
+                        </span>
+                     </button>
+                     <button class="vitem flex items-center gap-3 w-full text-left p-2.5 rounded-xl border border-line hover:border-g1/50 transition-colors" data-src="../assets/video/Fiche athlète.mp4">
+                        <span class="relative shrink-0 w-[108px] aspect-video rounded-lg overflow-hidden bg-black grid place-items-center">
+                           <video class="w-full h-full object-cover pointer-events-none" muted playsinline preload="metadata" src="../assets/video/Fiche athlète.mp4#t=0.5"></video>
+                           <span class="absolute top-1 left-1 text-[.56rem] font-mono font-bold text-white bg-black/60 rounded px-1 leading-[1.5]">03</span>
+                           <span class="vplay absolute inset-0 grid place-items-center bg-black/15"><i class="ri-play-circle-fill text-white text-2xl"></i></span>
+                        </span>
+                        <span class="min-w-0">
+                           <span class="block font-semibold text-[.92rem] leading-tight">Fiche athlète</span>
+                           <span class="block text-ash text-[.8rem] mt-0.5">Profil d'un athlète</span>
+                        </span>
+                     </button>
+                     <button class="vitem flex items-center gap-3 w-full text-left p-2.5 rounded-xl border border-line hover:border-g1/50 transition-colors" data-src="../assets/video/Classement.mp4">
+                        <span class="relative shrink-0 w-[108px] aspect-video rounded-lg overflow-hidden bg-black grid place-items-center">
+                           <video class="w-full h-full object-cover pointer-events-none" muted playsinline preload="metadata" src="../assets/video/Classement.mp4#t=0.5"></video>
+                           <span class="absolute top-1 left-1 text-[.56rem] font-mono font-bold text-white bg-black/60 rounded px-1 leading-[1.5]">04</span>
+                           <span class="vplay absolute inset-0 grid place-items-center bg-black/15"><i class="ri-play-circle-fill text-white text-2xl"></i></span>
+                        </span>
+                        <span class="min-w-0">
+                           <span class="block font-semibold text-[.92rem] leading-tight">Classement</span>
+                           <span class="block text-ash text-[.8rem] mt-0.5">Classements par épreuve</span>
+                        </span>
+                     </button>
+                     <button class="vitem flex items-center gap-3 w-full text-left p-2.5 rounded-xl border border-line hover:border-g1/50 transition-colors" data-src="../assets/video/Estimation de course - Relais mixte.mp4">
+                        <span class="relative shrink-0 w-[108px] aspect-video rounded-lg overflow-hidden bg-black grid place-items-center">
+                           <video class="w-full h-full object-cover pointer-events-none" muted playsinline preload="metadata" src="../assets/video/Estimation de course - Relais mixte.mp4#t=0.5"></video>
+                           <span class="absolute top-1 left-1 text-[.56rem] font-mono font-bold text-white bg-black/60 rounded px-1 leading-[1.5]">05</span>
+                           <span class="vplay absolute inset-0 grid place-items-center bg-black/15"><i class="ri-play-circle-fill text-white text-2xl"></i></span>
+                        </span>
+                        <span class="min-w-0">
+                           <span class="block font-semibold text-[.92rem] leading-tight">Estimation de course</span>
+                           <span class="block text-ash text-[.8rem] mt-0.5">Relais mixte</span>
+                        </span>
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!--==================== PROBLÈME / SOLUTION / IMPACT ====================-->
+      <section class="bg-paper pt-12 lg:pt-16">
+         <div class="container grid gap-5 md:grid-cols-3">
+            <div class="card-light p-6">
+               <div class="w-10 h-10 rounded-xl bg-g2/10 grid place-items-center mb-4"><i class="ri-error-warning-line text-g2 text-xl"></i></div>
+               <p class="text-[.72rem] font-semibold uppercase tracking-[.1em] text-ash mb-2">Problème</p>
+               <p class="text-ink/80 text-[.95rem] leading-relaxed">Les résultats internationaux de triathlon sont dispersés dans l'API World Triathlon et difficiles à exploiter par les équipes.</p>
+            </div>
+            <div class="card-light p-6">
+               <div class="w-10 h-10 rounded-xl bg-g1/10 grid place-items-center mb-4"><i class="ri-lightbulb-flash-line text-g1 text-xl"></i></div>
+               <p class="text-[.72rem] font-semibold uppercase tracking-[.1em] text-ash mb-2">Solution</p>
+               <p class="text-ink/80 text-[.95rem] leading-relaxed">Un pipeline Extract-Transform-Load alimente un entrepôt en architecture médaillon (SQL Server), exposé par une application Django sécurisée.</p>
+            </div>
+            <div class="card-light p-6">
+               <div class="w-10 h-10 rounded-xl bg-emerald-500/10 grid place-items-center mb-4"><i class="ri-line-chart-line text-emerald-600 text-xl"></i></div>
+               <p class="text-[.72rem] font-semibold uppercase tracking-[.1em] text-ash mb-2">Impact</p>
+               <p class="text-ink/80 text-[.95rem] leading-relaxed">Des performances centralisées, fiabilisées et consultables via une application interne à gestion des rôles.</p>
+            </div>
+         </div>
+      </section>
+
+      <!--==================== CONTENU : détail central + sidebar ====================-->
+      <section class="bg-paper pt-12 pb-20 lg:pt-16 lg:pb-28">
+         <div class="container grid gap-x-12 gap-y-12 lg:grid-cols-[minmax(0,1fr)_320px]">
+
+            <div class="flex flex-col gap-y-10 lg:gap-y-12 min-w-0">
+               <div>
+                  <h2 class="font-display font-semibold tracking-[-.02em] text-[1.5rem] lg:text-[1.75rem] mb-4">À propos du projet</h2>
+                  <p class="text-ash text-[1rem] leading-relaxed">La Fédération Française de Triathlon suit les performances de ses athlètes sur le circuit international. Ce projet centralise les résultats issus de l'API World Triathlon, les fiabilise et les met à disposition des équipes via une application interne sécurisée.</p>
+               </div>
+               <div>
+                  <p class="eyebrow text-grad text-[.72rem] font-semibold uppercase mb-3">Cadre &amp; collaboration</p>
+                  <p class="text-ash text-[1rem] leading-relaxed">Cette alternance se déroule dans le cadre et l'infrastructure de <strong class="text-ink font-semibold">France.Sport</strong>, la Maison Numérique du Sport de Haut Niveau portée par le ministère des Sports, l'Agence nationale du Sport et l'INSEP. Le travail mené pour la Fédération Française de Triathlon s'inscrit dans cet écosystème national de la donnée sportive de haut niveau, mutualisé entre les fédérations via le Sport Data Hub.</p>
+               </div>
+               <div>
+                  <p class="eyebrow text-grad text-[.72rem] font-semibold uppercase mb-3">Données</p>
+                  <p class="text-ash text-[1rem] leading-relaxed mb-4">Résultats de compétitions issus de l'API World Triathlon (athlètes, épreuves, classements, temps), à des formats hétérogènes qu'il faut normaliser avant toute exploitation.</p>
+                  <div class="flex flex-wrap gap-2"><span class="soft-chip-light">API World Triathlon</span><span class="soft-chip-light">SQL Server</span><span class="soft-chip-light">Architecture médaillon</span></div>
+               </div>
+               <div>
+                  <p class="eyebrow text-grad text-[.72rem] font-semibold uppercase mb-3">Démarche technique</p>
+                  <p class="text-ash text-[1rem] leading-relaxed">Un pipeline Extract-Transform-Load récupère les données de l'API, puis les charge dans un entrepôt structuré en architecture médaillon (source, nettoyage, couche métier, datamart) sur SQL Server. Une application Django (MVT, ORM) s'appuie sur cet entrepôt, avec authentification et gestion fine des rôles, et des environnements de développement et de production séparés.</p>
+               </div>
+               <div>
+                  <p class="eyebrow text-grad text-[.72rem] font-semibold uppercase mb-4">Réalisations</p>
+                  <ul class="flex flex-col gap-3">
+                     <li class="flex gap-3 text-ash text-[1rem] leading-relaxed"><i class="ri-check-line text-g1 text-lg mt-0.5 shrink-0"></i><span>Pipeline Extract-Transform-Load automatisé depuis l'API World Triathlon.</span></li>
+                     <li class="flex gap-3 text-ash text-[1rem] leading-relaxed"><i class="ri-check-line text-g1 text-lg mt-0.5 shrink-0"></i><span>Entrepôt de données en architecture médaillon (SQL Server).</span></li>
+                     <li class="flex gap-3 text-ash text-[1rem] leading-relaxed"><i class="ri-check-line text-g1 text-lg mt-0.5 shrink-0"></i><span>Application Django (front et back) avec authentification et gestion des rôles.</span></li>
+                     <li class="flex gap-3 text-ash text-[1rem] leading-relaxed"><i class="ri-check-line text-g1 text-lg mt-0.5 shrink-0"></i><span>Environnements dev et prod séparés, versionnés sous Git / GitLab.</span></li>
+                  </ul>
+               </div>
+               <div>
+                  <p class="eyebrow text-grad text-[.72rem] font-semibold uppercase mb-4">Compétences démontrées</p>
+                  <div class="flex flex-wrap gap-2.5">
+                     <span class="soft-chip-light">Développement full stack</span><span class="soft-chip-light">Data engineering</span><span class="soft-chip-light">Modélisation de données</span><span class="soft-chip-light">Gestion des rôles</span><span class="soft-chip-light">Environnement professionnel</span>
+                  </div>
+               </div>
+            </div>
+
+            <aside class="flex flex-col gap-4 lg:sticky lg:top-[72px] lg:self-start">
+               <div class="card-light p-5">
+                  <p class="text-[.68rem] font-semibold uppercase tracking-[.1em] text-ash mb-3">Code source</p>
+                  <div class="flex items-center gap-2.5 text-ink/80 text-[.92rem]"><i class="ri-lock-2-line text-g1 text-lg shrink-0"></i> Code privé.</div>
+               </div>
+               <div class="card-light p-5">
+                  <p class="text-[.68rem] font-semibold uppercase tracking-[.1em] text-ash mb-3">Stack</p>
+                  <div class="flex flex-wrap gap-x-4 gap-y-3">
+                     <span class="inline-flex items-center gap-2"><img src="../assets/img/Python.svg" alt="Python" class="w-5 h-5 object-contain"><span class="text-[.85rem] font-medium text-ink">Python</span></span>
+                     <span class="inline-flex items-center gap-2"><img src="../assets/img/django.webp" alt="Django" class="w-5 h-5 object-contain"><span class="text-[.85rem] font-medium text-ink">Django</span></span>
+                     <span class="inline-flex items-center gap-2"><img src="../assets/img/microsoft-sql-server.png" alt="SQL Server" class="w-5 h-5 object-contain"><span class="text-[.85rem] font-medium text-ink">SQL Server</span></span>
+                     <span class="inline-flex items-center gap-2"><img src="../assets/img/javascript-r.svg" alt="JavaScript" class="w-5 h-5 object-contain"><span class="text-[.85rem] font-medium text-ink">JavaScript</span></span>
+                     <span class="inline-flex items-center gap-2"><img src="../assets/img/html-1.svg" alt="HTML" class="w-5 h-5 object-contain"><span class="text-[.85rem] font-medium text-ink">HTML</span></span>
+                     <span class="inline-flex items-center gap-2"><img src="../assets/img/css-3.svg" alt="CSS" class="w-5 h-5 object-contain"><span class="text-[.85rem] font-medium text-ink">CSS</span></span>
+                     <span class="inline-flex items-center gap-2"><img src="../assets/img/git-icon.svg" alt="Git" class="w-5 h-5 object-contain"><span class="text-[.85rem] font-medium text-ink">Git</span></span>
+                     <span class="inline-flex items-center gap-2"><i class="fa-brands fa-gitlab text-[1.15rem] text-[#fc6d26]"></i><span class="text-[.85rem] font-medium text-ink">GitLab</span></span>
+                  </div>
+                  <p class="text-[.72rem] text-ash mt-3">+ ECharts, AJAX</p>
+               </div>
+               <div class="card-light p-5">
+                  <p class="text-[.68rem] font-semibold uppercase tracking-[.1em] text-ash mb-4">Informations</p>
+                  <dl class="flex flex-col gap-y-3 text-[.9rem]">
+                     <div class="flex items-center justify-between gap-4"><dt class="text-ash">Type</dt><dd class="font-medium text-right">Alternance</dd></div>
+                     <div class="flex items-center justify-between gap-4"><dt class="text-ash">Rôle</dt><dd class="font-medium text-right">Full Stack &amp; Data</dd></div>
+                     <div class="flex items-center justify-between gap-4"><dt class="text-ash">Cadre</dt><dd class="font-medium text-right">France.Sport</dd></div>
+                     <div class="flex items-center justify-between gap-4"><dt class="text-ash">Structure</dt><dd class="font-medium text-right">FFTri / ANS</dd></div>
+                     <div class="flex items-center justify-between gap-4"><dt class="text-ash">Période</dt><dd class="font-medium text-right">Depuis sept. 2025</dd></div>
+                     <div class="flex items-center justify-between gap-4"><dt class="text-ash">Statut</dt><dd class="text-g1 font-medium text-right">En cours</dd></div>
+                  </dl>
+               </div>
+            </aside>
+
+         </div>
+      </section>
+
+      <!--==================== AUTRES PROJETS ====================-->
+      <section class="bg-paper border-t border-line pt-14 pb-20 lg:pt-16 lg:pb-24">
+         <div class="container">
+            <div class="flex items-end justify-between gap-5 mb-8">
+               <h2 class="font-display font-semibold tracking-[-.03em] text-[clamp(1.6rem,3.4vw,2.3rem)]">Autres projets</h2>
+               <a href="../index.html#projects" class="shrink-0 inline-flex items-center gap-2 font-medium text-ink underline decoration-g1 decoration-2 underline-offset-[6px] hover:text-g1 transition-colors text-[.92rem]">Tous les projets</a>
+            </div>
+            <div class="grid gap-5 sd:grid-cols-3">
+               <a href="stationnement-carcassonne.html" class="group relative block rounded-2xl overflow-hidden border border-line aspect-[16/10]">
+                  <img src="../assets/img/projet-stationnement.jpg" alt="Stationnement de Carcassonne" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.05]">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+                  <div class="absolute bottom-0 left-0 p-5">
+                     <p class="text-[.62rem] font-mono uppercase tracking-[.12em] text-g1 mb-1">Full stack · SIG</p>
+                     <p class="text-white font-semibold text-[1.1rem]">Stationnement de Carcassonne</p>
+                  </div>
+               </a>
+               <a href="cartographie-randonnees.html" class="group relative block rounded-2xl overflow-hidden border border-line aspect-[16/10]">
+                  <img src="../assets/img/randonnee-background.webp" alt="Cartographie des randonnées" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.05]">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+                  <div class="absolute bottom-0 left-0 p-5">
+                     <p class="text-[.62rem] font-mono uppercase tracking-[.12em] text-g1 mb-1">Full stack · SVG</p>
+                     <p class="text-white font-semibold text-[1.1rem]">Cartographie des randonnées</p>
+                  </div>
+               </a>
+               <a href="accidents-velo.html" class="group relative block rounded-2xl overflow-hidden border border-line aspect-[16/10]">
+                  <img src="../assets/img/accident-velo.webp" alt="Accidents à vélo" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.05]">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+                  <div class="absolute bottom-0 left-0 p-5">
+                     <p class="text-[.62rem] font-mono uppercase tracking-[.12em] text-g1 mb-1">Data · SIG</p>
+                     <p class="text-white font-semibold text-[1.1rem]">Accidents à vélo</p>
+                  </div>
+               </a>
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <!--==================== FOOTER ====================-->
+   <footer class="relative overflow-hidden bg-night text-cloud border-t border-edge pt-16 pb-14">
+      <div aria-hidden="true" class="dash-field pointer-events-none absolute inset-x-0 bottom-0 h-[240px] -z-10 opacity-40 bg-[radial-gradient(70%_120%_at_50%_100%,#ff7a1a_0%,#ff2d55_32%,transparent_68%)]"></div>
+      <div class="container flex flex-col items-center gap-y-7">
+         <a href="../index.html#home" class="font-bold text-[1.6rem] tracking-tight">Johan<span class="text-grad"> TASSART</span></a>
+         <ul class="flex items-center gap-x-6 sd:gap-x-9 text-[.9rem]">
+            <li><a href="../index.html#home" class="text-fog transition-colors duration-[.3s] hover:text-cloud">Accueil</a></li>
+            <li><a href="../index.html#competences" class="text-fog transition-colors duration-[.3s] hover:text-cloud">Compétences</a></li>
+            <li><a href="../index.html#projects" class="text-fog transition-colors duration-[.3s] hover:text-cloud">Projets</a></li>
+            <li><a href="../index.html#experience" class="text-fog transition-colors duration-[.3s] hover:text-cloud">Parcours</a></li>
+         </ul>
+         <div class="flex items-center gap-x-3">
+            <a href="https://www.linkedin.com/in/johan-tassart-39744821a/" target="_blank" class="w-10 h-10 border border-edge text-cloud text-xl rounded-full grid place-items-center transition-colors hover:bg-white hover:text-night" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://gitlab.com/JohanTASSART" target="_blank" class="w-10 h-10 border border-edge text-cloud text-xl rounded-full grid place-items-center transition-colors hover:bg-white hover:text-night" aria-label="GitLab"><i class="fa-brands fa-gitlab"></i></a>
+            <a href="https://coddy.tech/user/aKT2mEdOvWOMSBfDnumaO4ARbiA2" target="_blank" class="w-10 h-10 border border-edge rounded-full grid place-items-center transition-colors hover:bg-white" aria-label="Coddy"><img src="../assets/img/coddy%20tech.svg" alt="Coddy" class="h-6 w-6 object-contain"></a>
+         </div>
+         <span class="block mt-4 text-center text-[.82rem] text-fog">Portfolio · Johan TASSART</span>
+      </div>
+   </footer>
+
+   <a href="#top" class="scrollup fixed right-4 xl:right-16 -bottom-1/2 bg-white border border-line inline-flex p-2 text-ink text-xl rounded-[.75rem] shadow-[0_8px_24px_rgba(0,0,0,.15)] z-10 [transition:bottom_.4s,transform_.4s] hover:-translate-y-2" id="scroll-up">
+      <i class="ri-arrow-up-line"></i>
+   </a>
+
+   <script src="../assets/js/main.js?v=30"></script>
+   <script>
+      (function () {
+         var slides = document.querySelectorAll('.hero-slide');
+         var dots = document.querySelectorAll('.hero-dot');
+         var i = 0, n = slides.length;
+         function show(k) { for (var s = 0; s < n; s++) { slides[s].classList.toggle('is-active', s === k); if (dots[s]) dots[s].classList.toggle('is-active', s === k); } i = k; }
+         if (n > 1) { setInterval(function () { show((i + 1) % n); }, 4500); for (var d = 0; d < dots.length; d++) (function (k) { dots[k].addEventListener('click', function () { show(k); }); })(d); }
+
+         var player = document.getElementById('vplayer');
+         var source = document.getElementById('vsource');
+         var items = document.querySelectorAll('.vitem');
+         for (var v = 0; v < items.length; v++) {
+            items[v].addEventListener('click', function () {
+               for (var x = 0; x < items.length; x++) items[x].classList.remove('is-active');
+               this.classList.add('is-active');
+               source.src = this.getAttribute('data-src');
+               player.load();
+               var pr = player.play(); if (pr && pr.catch) pr.catch(function () {});
+               player.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            });
+         }
+      })();
+   </script>
+</body>
+</html>

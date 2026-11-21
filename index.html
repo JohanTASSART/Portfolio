@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--=============== FAVICON ===============-->
+   <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+   <link rel="apple-touch-icon" href="assets/img/favicon.ico">
+
+   <!--=============== GOOGLE FONTS ===============-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap">
+
+   <!--=============== REMIXICONS ===============-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+   <!--=============== TAILWIND (CDN, sans npm) ===============-->
+   <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+   <script src="assets/js/tailwind.config.js"></script>
+
+   <!--=============== CSS CUSTOM (fichier externe) ===============-->
+   <link rel="stylesheet" href="assets/css/styles.css?v=50">
+
+   <title>Johan TASSART · Développeur Full Stack & Data</title>
+</head>
+<body class="bg-paper text-cloud font-sans antialiased text-[.95rem] lg:text-base">
+
+   <!--==================== NAV COMPACTE (apparaît au scroll) ====================-->
+   <div id="mini-nav" class="fixed top-2 lg:top-3 inset-x-2 lg:inset-x-3 z-[100] rounded-2xl bg-night/90 backdrop-blur-[16px] border border-edge shadow-[0_12px_34px_-18px_rgba(0,0,0,.55)] opacity-0 -translate-y-3 pointer-events-none transition-all duration-300">
+      <nav class="flex items-center justify-between h-12 gap-4 px-5 lg:px-7">
+         <a href="#home" class="shrink-0 flex items-center gap-2 font-bold tracking-tight text-[1rem]"><img src="assets/img/image_portfolio.png" alt="" class="w-6 h-6 object-contain"><span>Johan <span class="text-fog">TASSART</span></span></a>
+         <ul class="nav_list flex items-center gap-x-4 sd:gap-x-7 text-[.88rem]">
+            <li><a href="#home" title="Accueil" class="nav-link"><i class="ri-home-5-line text-xl sd:hidden"></i><span class="hidden sd:inline">Accueil</span></a></li>
+            <li><a href="#competences" title="Compétences" class="nav-link"><i class="ri-stack-line text-xl sd:hidden"></i><span class="hidden sd:inline">Compétences</span></a></li>
+            <li><a href="#projects" title="Projets" class="nav-link"><i class="ri-folder-line text-xl sd:hidden"></i><span class="hidden sd:inline">Projets</span></a></li>
+            <li><a href="#formation" title="Formations" class="nav-link"><i class="ri-honour-line text-xl sd:hidden"></i><span class="hidden sd:inline">Formations</span></a></li>
+            <li><a href="#experience" title="Expériences" class="nav-link"><i class="ri-briefcase-line text-xl sd:hidden"></i><span class="hidden sd:inline">Expériences</span></a></li>
+         </ul>
+         <a href="assets/pdf/cv-johan-tassart.pdf" target="_blank" class="pill-solid hidden md:inline-flex items-center gap-2 rounded-full py-1 pl-1 pr-3.5 text-[.82rem] font-medium transition-colors"><img src="assets/img/profil.png" alt="" class="w-6 h-6 rounded-full object-cover object-top"> Mon CV <i class="ri-arrow-right-up-line text-sm"></i></a>
+      </nav>
+   </div>
+
+   <main class="overflow-hidden">
+
+      <!--==================== HERO + STACK (ensemble = 100svh) ====================-->
+      <div class="flex flex-col bg-paper lg:h-[100svh]">
+
+      <div class="flex-1 min-h-0 p-3 lg:p-5 flex">
+      <section class="relative w-full rounded-[2rem] overflow-hidden bg-night shadow-[0_26px_70px_-34px_rgba(0,0,0,.5)] flex flex-col scroll-mt-24 min-h-[calc(100svh-7rem)] lg:min-h-0" id="home">
+         <!-- Image de fond (placeholder a remplacer par une vraie image) -->
+         <div aria-hidden="true" class="pointer-events-none absolute inset-0 overflow-hidden rounded-[1.75rem]">
+            <img src="assets/img/profil.png" alt="" class="absolute right-0 bottom-0 h-[96%] w-[66%] object-contain object-bottom opacity-[.55] [mask-image:linear-gradient(to_left,black_50%,transparent_98%)] [-webkit-mask-image:linear-gradient(to_left,black_50%,transparent_98%)]">
+            <div class="absolute inset-0 bg-gradient-to-r from-night via-night/70 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-night via-transparent to-night/40"></div>
+         </div>
+
+         <!-- Menu dans le hero -->
+         <div class="relative z-10 flex items-center justify-between gap-4 px-6 lg:px-10 pt-6 lg:pt-7">
+            <a href="#home" class="shrink-0 flex items-center gap-2.5 font-bold tracking-tight text-[1.1rem]"><img src="assets/img/image_portfolio.png" alt="Logo" class="w-8 h-8 object-contain"><span>Johan <span class="text-fog">TASSART</span></span></a>
+            <ul class="nav_list flex items-center gap-x-5 md:gap-x-8 text-[.92rem]">
+               <li><a href="#home" title="Accueil" class="nav-link active-link"><i class="ri-home-5-line text-xl md:hidden"></i><span class="hidden md:inline">Accueil</span></a></li>
+               <li><a href="#competences" title="Compétences" class="nav-link"><i class="ri-stack-line text-xl md:hidden"></i><span class="hidden md:inline">Compétences</span></a></li>
+               <li><a href="#projects" title="Projets" class="nav-link"><i class="ri-folder-line text-xl md:hidden"></i><span class="hidden md:inline">Projets</span></a></li>
+               <li><a href="#formation" title="Formations" class="nav-link"><i class="ri-honour-line text-xl md:hidden"></i><span class="hidden md:inline">Formations</span></a></li>
+               <li><a href="#experience" title="Expériences" class="nav-link"><i class="ri-briefcase-line text-xl md:hidden"></i><span class="hidden md:inline">Expériences</span></a></li>
+            </ul>
+            <a href="assets/pdf/cv-johan-tassart.pdf" target="_blank" class="pill-solid hidden lg:inline-flex items-center gap-2 rounded-full py-1.5 pl-1.5 pr-4 text-[.88rem] font-medium transition-colors"><img src="assets/img/profil.png" alt="" class="w-7 h-7 rounded-full object-cover object-top"> Mon CV <i class="ri-arrow-right-up-line text-base"></i></a>
+         </div>
+
+         <!-- Contenu principal -->
+         <div class="relative z-10 flex-1 flex items-center px-6 lg:px-10 py-10">
+            <div class="max-w-[720px]">
+               <h1 class="font-display font-semibold tracking-[-.04em] leading-[.92] text-[clamp(2.7rem,8.5vw,6rem)] mb-7">Full Stack &amp;<br>Data Engineer</h1>
+               <p class="max-w-[620px] text-fog text-[1.02rem] lg:text-[1.12rem] leading-relaxed font-light">
+                  Développeur full stack en formation, je conçois des applications web du front-end au back-end, connectées à des bases de données relationnelles et NoSQL, avec une solide culture de la donnée (pipelines, modélisation, entrepôt).
+               </p>
+            </div>
+         </div>
+
+         <!-- Barre basse : meta + reseaux + objectif/CTA -->
+         <div class="relative z-10 flex flex-col gap-7 lg:flex-row lg:items-end lg:justify-between px-6 lg:px-10 pb-7 lg:pb-9">
+            <div class="flex flex-wrap items-center gap-x-5 gap-y-3 text-[.92rem] font-medium uppercase tracking-[.1em] text-fog">
+               <span>+ Full Stack &amp; Data</span>
+               <span>+ En alternance</span>
+               <span>+ Carcassonne, France</span>
+               <span class="flex items-center gap-4 text-lg normal-case tracking-normal ml-1">
+                  <a href="https://www.linkedin.com/in/johan-tassart-39744821a/" target="_blank" class="hover:text-cloud transition-colors" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                  <a href="https://gitlab.com/JohanTASSART" target="_blank" class="hover:text-cloud transition-colors" aria-label="GitLab"><i class="fa-brands fa-gitlab"></i></a>
+                  <a href="https://coddy.tech/user/aKT2mEdOvWOMSBfDnumaO4ARbiA2" target="_blank" class="hover:opacity-70 transition-opacity inline-flex items-center" aria-label="Coddy"><img src="assets/img/coddy%20tech.svg" alt="Coddy" class="h-5 w-5 object-contain"></a>
+               </span>
+            </div>
+            <div class="lg:text-right">
+               <p class="text-cloud font-semibold text-[1.05rem] leading-snug">En recherche d'alternance</p>
+               <p class="text-fog text-[.9rem] mb-4 max-w-[330px] lg:ml-auto">pour intégrer une école d'informatique : développeur full stack, BI ou data engineering.</p>
+               <div class="flex flex-wrap gap-3 lg:justify-end">
+                  <a href="#projects" class="btn btn-grad !py-2.5 !px-5 text-[.88rem]">Voir mes projets</a>
+               </div>
+            </div>
+         </div>
+      </section>
+      </div>
+
+      <!--==================== MARQUEE TECHNOS (dans le 100svh du hero) ====================-->
+      <section aria-label="Technologies" class="bg-paper text-ink pt-1 pb-6 lg:pt-2 lg:pb-8 overflow-hidden shrink-0">
+         <div class="flex items-center gap-6 lg:gap-12 px-6 lg:px-10">
+            <div class="shrink-0 flex items-center gap-3 max-w-[200px]">
+               <span class="text-g1 text-[1.7rem] leading-none" aria-hidden="true">✱</span>
+               <p class="text-[.72rem] font-medium uppercase tracking-[.04em] text-ash leading-tight font-mono">Technologies utilisées en développement web &amp; data</p>
+            </div>
+            <div class="overflow-hidden flex-1 [mask-image:linear-gradient(to_right,transparent,black_3%,black_95%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_3%,black_95%,transparent)]">
+               <div class="flex items-center gap-16 w-max animate-marquee hover:[animation-play-state:paused] opacity-100 hover:opacity-100">
+                  <span class="flex items-center gap-3 shrink-0"><img src="assets/img/html-1.svg" alt="HTML" class="h-12 w-12 object-contain shrink-0 opacity-70"><span class="text-[1.25rem] font-semibold whitespace-nowrap text-ash">HTML</span></span>
+                  <span class="flex items-center gap-3 shrink-0"><img src="assets/img/css-3.svg" alt="CSS" class="h-12 w-12 object-contain shrink-0 opacity-70"><span class="text-[1.25rem] font-semibold whitespace-nowrap text-ash">CSS</span></span>
+                  <span class="flex items-center gap-3 shrink-0"><img src="assets/img/tailwind-css-2.svg" alt="Tailwind CSS" class="h-12 w-12 object-contain shrink-0 opacity-70"><span class="text-[1.25rem] font-semibold whitespace-nowrap text-ash">Tailwind</span></span>
+                  <span class="flex items-center gap-3 shrink-0"><img src="assets/img/javascript-r.svg" alt="JavaScript" class="h-12 w-12 object-contain shrink-0 opacity-70"><span class="text-[1.25rem] font-semibold whitespace-nowrap text-ash">JavaScript</span></span>
+                  <span class="flex items-center gap-3 shrink-0"><img src="assets/img/php.svg" alt="PHP" class="h-12 w-12 object-contain shrink-0 opacity-70"><span class="text-[1.25rem] font-semibold whitespace-nowrap text-ash">PHP</span></span>
+                  <span class="flex items-center gap-3 shrink-0"><img src="assets/img/Python.svg" alt="Python" class="h-12 w-12 object-contain shrink-0 opacity-70"><span class="text-[1.25rem] font-semibold whitespace-nowrap text-ash">Python</span></span>
+                  <span class="flex items-center gap-3 shrink-0"><img src="assets/img/django.webp" alt="Django" class="h-12 w-12 object-contain shrink-0 opacity-70"><span class="text-[1.25rem] font-semibold whitespace-nowrap text-ash">Django</span></span>
+                  <span class="flex items-center gap-3 shrink-0"><img src="assets/img/R_logo.png" alt="R" class="h-12 w-12 object-contain shrink-0 opacity-70"><span class="text-[1.25rem] font-semibold whitespace-nowrap text-ash">R</span></span>
+                  <span class="flex items-center gap-3 shrink-0"><img src="assets/img/microsoft-sql-server.png" alt="SQL Server" class="h-12 w-12 object-contain shrink-0 opacity-70"><span class="text-[1.25rem] font-semibold whitespace-nowrap text-ash">SQL Server</span></span>
+                  <span class="flex items-center gap-3 shrink-0"><img src="assets/img/postgre.png" alt="PostgreSQL" class="h-12 w-12 object-contain shrink-0 opacity-70"><span class="text-[1.25rem] font-semibold whitespace-nowrap text-ash">PostgreSQL</span></span>
+                  <span class="flex items-center gap-3 shrink-0"><img src="assets/img/mongo-logo.png" alt="MongoDB" class="h-12 w-12 object-contain shrink-0 opacity-70"><span class="text-[1.25rem] font-semibold whitespace-nowrap text-ash">MongoDB</span></span>
+                  <span class="flex items-center gap-3 shrink-0"><img src="assets/img/neo4j.webp" alt="Neo4j" class="h-12 w-12 object-contain shrink-0 opacity-70"><span class="text-[1.25rem] font-semibold whitespace-nowrap text-ash">Neo4j</span></span>
+                  <span class="flex items-center gap-3 shrink-0"><img src="assets/img/airflow.png" alt="Airflow" class="h-12 w-12 object-contain shrink-0 opacity-70"><span class="text-[1.25rem] font-semibold whitespace-nowrap text-ash">Airflow</span></span>
+                  <span class="flex items-center gap-3 shrink-0"><img src="assets/img/git-icon.svg" alt="Git" class="h-12 w-12 object-contain shrink-0 opacity-70"><span class="text-[1.25rem] font-semibold whitespace-nowrap text-ash">Git</span></span>
+                  <!-- Duplicata pour la boucle -->
+                  <span class="flex items-center gap-3 shrink-0" aria-hidden="true"><img src="assets/img/html-1.svg" alt="" class="h-12 w-12 object-contain shrink-0 opacity-70"><span class="text-[1.25rem] font-semibold whitespace-nowrap text-ash">HTML</span></span>
+                  <span class="flex items-center gap-3 shrink-0" aria-hidden="true"><img src="assets/img/css-3.svg" alt="" class="h-12 w-12 object-contain shrink-0 opacity-70"><span class="text-[1.25rem] font-semibold whitespace-nowrap text-ash">CSS</span></span>
+                  <span class="flex items-center gap-3 shrink-0" aria-hidden="true"><img src="assets/img/tailwind-css-2.svg" alt="" class="h-12 w-12 object-contain shrink-0 opacity-70"><span class="text-[1.25rem] font-semibold whitespace-nowrap text-ash">Tailwind</span></span>
+                  <span class="flex items-center gap-3 shrink-0" aria-hidden="true"><img src="assets/img/javascript-r.svg" alt="" class="h-12 w-12 object-contain shrink-0 opacity-70"><span class="text-[1.25rem] font-semibold whitespace-nowrap text-ash">JavaScript</span></span>
+                  <span class="flex items-center gap-3 shrink-0" aria-hidden="true"><img src="assets/img/php.svg" alt="" class="h-12 w-12 object-contain shrink-0 opacity-70"><span class="text-[1.25rem] font-semibold whitespace-nowrap text-ash">PHP</span></span>
+                  <span class="flex items-center gap-3 shrink-0" aria-hidden="true"><img src="assets/img/Python.svg" alt="" class="h-12 w-12 object-contain shrink-0 opacity-70"><span class="text-[1.25rem] font-semibold whitespace-nowrap text-ash">Python</span></span>
+                  <span class="flex items-center gap-3 shrink-0" aria-hidden="true"><img src="assets/img/django.webp" alt="" class="h-12 w-12 object-contain shrink-0 opacity-70"><span class="text-[1.25rem] font-semibold whitespace-nowrap text-ash">Django</span></span>
+                  <span class="flex items-center gap-3 shrink-0" aria-hidden="true"><img src="assets/img/R_logo.png" alt="" class="h-12 w-12 object-contain shrink-0 opacity-70"><span class="text-[1.25rem] font-semibold whitespace-nowrap text-ash">R</span></span>
+                  <span class="flex items-center gap-3 shrink-0" aria-hidden="true"><img src="assets/img/microsoft-sql-server.png" alt="" class="h-12 w-12 object-contain shrink-0 opacity-70"><span class="text-[1.25rem] font-semibold whitespace-nowrap text-ash">SQL Server</span></span>
+                  <span class="flex items-center gap-3 shrink-0" aria-hidden="true"><img src="assets/img/postgre.png" alt="" class="h-12 w-12 object-contain shrink-0 opacity-70"><span class="text-[1.25rem] font-semibold whitespace-nowrap text-ash">PostgreSQL</span></span>
+                  <span class="flex items-center gap-3 shrink-0" aria-hidden="true"><img src="assets/img/mongo-logo.png" alt="" class="h-12 w-12 object-contain shrink-0 opacity-70"><span class="text-[1.25rem] font-semibold whitespace-nowrap text-ash">MongoDB</span></span>
+                  <span class="flex items-center gap-3 shrink-0" aria-hidden="true"><img src="assets/img/neo4j.webp" alt="" class="h-12 w-12 object-contain shrink-0 opacity-70"><span class="text-[1.25rem] font-semibold whitespace-nowrap text-ash">Neo4j</span></span>
+                  <span class="flex items-center gap-3 shrink-0" aria-hidden="true"><img src="assets/img/airflow.png" alt="" class="h-12 w-12 object-contain shrink-0 opacity-70"><span class="text-[1.25rem] font-semibold whitespace-nowrap text-ash">Airflow</span></span>
+                  <span class="flex items-center gap-3 shrink-0" aria-hidden="true"><img src="assets/img/git-icon.svg" alt="" class="h-12 w-12 object-contain shrink-0 opacity-70"><span class="text-[1.25rem] font-semibold whitespace-nowrap text-ash">Git</span></span>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      </div>
+      <!--==================== COMPETENCES ====================-->
+      <section class="bg-paper text-ink scroll-mt-24 pt-16 pb-20 lg:pt-20 lg:pb-28" id="competences">
+         <div class="container">
+            <p class="eyebrow text-grad text-[.72rem] font-semibold uppercase mb-3">Savoir-faire</p>
+            <h2 class="font-display font-semibold tracking-[-.03em] text-[clamp(1.55rem,6vw,3.4rem)] leading-[1.03] mb-10 lg:mb-14">
+               De l'interface à la donnée,<br><span class="text-ash">un stack qui ne demande qu'à grandir.</span>
+            </h2>
+
+            <div class="grid gap-5 sd:grid-cols-[min(380px,90vw)] sd:justify-center md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+               <!-- Front-end -->
+               <article class="media-card lift h-[230px] p-6 flex flex-col justify-end">
+                  <div class="media-bg" style="background-image:url('assets/img/background-front.jpg')"></div>
+                  <div class="media-shade"></div>
+                  <div class="relative">
+                     <p class="eyebrow text-g1 text-[.7rem] font-semibold uppercase mb-1">Interface</p>
+                     <h3 class="font-bold text-[1.2rem] mb-2 text-cloud">Front-end</h3>
+                     <p class="text-fog text-[.85rem] leading-relaxed mb-3">Interfaces web réactives et responsives.</p>
+                     <div class="flex flex-wrap gap-2"><span class="skill-chip">HTML</span><span class="skill-chip">CSS</span><span class="skill-chip">Tailwind</span><span class="skill-chip">JavaScript</span></div>
+                  </div>
+               </article>
+               <!-- Back-end -->
+               <article class="media-card lift h-[230px] p-6 flex flex-col justify-end">
+                  <div class="media-bg" style="background-image:url('assets/img/background-backendjpg.jpg')"></div>
+                  <div class="media-shade"></div>
+                  <div class="relative">
+                     <p class="eyebrow text-g1 text-[.7rem] font-semibold uppercase mb-1">Serveur</p>
+                     <h3 class="font-bold text-[1.2rem] mb-2 text-cloud">Back-end</h3>
+                     <p class="text-fog text-[.85rem] leading-relaxed mb-3">Logique serveur, authentification et gestion des rôles.</p>
+                     <div class="flex flex-wrap gap-2"><span class="skill-chip">Python</span><span class="skill-chip">Django</span><span class="skill-chip">PHP</span></div>
+                  </div>
+               </article>
+               <!-- Bases de données -->
+               <article class="media-card lift h-[230px] p-6 flex flex-col justify-end">
+                  <div class="media-bg" style="background-image:url('assets/img/background-bdd.jpg')"></div>
+                  <div class="media-shade"></div>
+                  <div class="relative">
+                     <p class="eyebrow text-g1 text-[.7rem] font-semibold uppercase mb-1">Data</p>
+                     <h3 class="font-bold text-[1.2rem] mb-2 text-cloud">Bases de données</h3>
+                     <p class="text-fog text-[.85rem] leading-relaxed mb-3">Modélisation relationnelle et NoSQL.</p>
+                     <div class="flex flex-wrap gap-2"><span class="skill-chip">SQL Server</span><span class="skill-chip">PostgreSQL</span><span class="skill-chip">MongoDB</span><span class="skill-chip">Neo4j</span></div>
+                  </div>
+               </article>
+               <!-- Data & BI -->
+               <article class="media-card lift h-[230px] p-6 flex flex-col justify-end">
+                  <div class="media-bg" style="background-image:url('assets/img/background-data.jpg')"></div>
+                  <div class="media-shade"></div>
+                  <div class="relative">
+                     <p class="eyebrow text-g1 text-[.7rem] font-semibold uppercase mb-1">Analyse</p>
+                     <h3 class="font-bold text-[1.2rem] mb-2 text-cloud">Data &amp; BI</h3>
+                     <p class="text-fog text-[.85rem] leading-relaxed mb-3">Traitement, analyse et visualisation de données.</p>
+                     <div class="flex flex-wrap gap-2"><span class="skill-chip">Python</span><span class="skill-chip">R</span><span class="skill-chip">SQL</span></div>
+                  </div>
+               </article>
+               <!-- Data engineering -->
+               <article class="media-card lift h-[230px] p-6 flex flex-col justify-end">
+                  <div class="media-bg" style="background-image:url('assets/img/background-engineering.jpg')"></div>
+                  <div class="media-shade"></div>
+                  <div class="relative">
+                     <p class="eyebrow text-g1 text-[.7rem] font-semibold uppercase mb-1">Pipeline</p>
+                     <h3 class="font-bold text-[1.2rem] mb-2 text-cloud">Data engineering</h3>
+                     <p class="text-fog text-[.85rem] leading-relaxed mb-3">Pipelines et entrepôt de données en architecture médaillon.</p>
+                     <div class="flex flex-wrap gap-2"><span class="skill-chip">Extract-Transform-Load</span><span class="skill-chip">Datamart</span><span class="skill-chip">SQL Server</span></div>
+                  </div>
+               </article>
+               <!-- Outils & méthodes -->
+               <article class="media-card lift h-[230px] p-6 flex flex-col justify-end">
+                  <div class="media-bg" style="background-image:url('assets/img/background-outil.jpg')"></div>
+                  <div class="media-shade"></div>
+                  <div class="relative">
+                     <p class="eyebrow text-g1 text-[.7rem] font-semibold uppercase mb-1">Workflow</p>
+                     <h3 class="font-bold text-[1.2rem] mb-2 text-cloud">Outils &amp; méthodes</h3>
+                     <p class="text-fog text-[.85rem] leading-relaxed mb-3">Méthodes agiles, modélisation et versionnement.</p>
+                     <div class="flex flex-wrap gap-2"><span class="skill-chip">Agile</span><span class="skill-chip">UML</span><span class="skill-chip">Git</span><span class="skill-chip">GitLab</span></div>
+                  </div>
+               </article>
+            </div>
+
+            <div class="mt-10 lg:mt-12">
+               <h3 class="font-semibold text-[1.05rem] mb-5">Compétences transversales</h3>
+               <div class="flex flex-wrap gap-2.5">
+                  <span class="soft-chip-light">Autonomie</span>
+                  <span class="soft-chip-light">Rigueur analytique</span>
+                  <span class="soft-chip-light">Travail en équipe</span>
+                  <span class="soft-chip-light">Curiosité technique</span>
+                  <span class="soft-chip-light">Capacité à vulgariser</span>
+                  <span class="soft-chip-light">Adaptabilité</span>
+                  <span class="soft-chip-light">Gestion de projet</span>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!--==================== CHIFFRES CLÉS (entre Compétences et Projets) ====================-->
+      <section class="bg-night border-t border-edge py-12 lg:py-16" aria-label="Chiffres clés">
+         <div class="container grid grid-cols-3 gap-4 lg:gap-10 max-w-[820px]">
+            <div class="text-center">
+               <p class="stat text-grad font-extrabold text-[1.95rem] sd:text-[2.4rem] lg:text-[3.2rem] leading-none" data-target="5">0</p>
+               <p class="text-fog text-[.58rem] sd:text-[.72rem] lg:text-[.76rem] mt-2.5 uppercase tracking-[.1em] sd:tracking-[.14em] font-mono">Projets</p>
+            </div>
+            <div class="text-center border-x border-edge">
+               <p class="stat text-grad font-extrabold text-[1.95rem] sd:text-[2.4rem] lg:text-[3.2rem] leading-none" data-target="13" data-suffix="+">0</p>
+               <p class="text-fog text-[.58rem] sd:text-[.72rem] lg:text-[.76rem] mt-2.5 uppercase tracking-[.1em] sd:tracking-[.14em] font-mono">Technologies</p>
+            </div>
+            <div class="text-center">
+               <p class="stat text-grad font-extrabold text-[1.95rem] sd:text-[2.4rem] lg:text-[3.2rem] leading-none" data-target="6">0</p>
+               <p class="text-fog text-[.58rem] sd:text-[.72rem] lg:text-[.76rem] mt-2.5 uppercase tracking-[.1em] sd:tracking-[.14em] font-mono">Domaines techniques</p>
+            </div>
+         </div>
+      </section>
+
+      <!--==================== GALERIE PROJETS (défilement d'images) ====================-->
+      <section class="bg-paper text-ink pt-8 pb-14 lg:pt-12 lg:pb-20 overflow-hidden" id="projects">
+         <div class="px-6 lg:px-12">
+            <p class="eyebrow text-grad text-[.72rem] font-semibold uppercase mb-3">Aperçu</p>
+            <div class="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+               <h2 class="font-display font-semibold tracking-[-.03em] text-[clamp(1.9rem,5vw,3.2rem)] leading-[1.04] max-w-[700px]">Des projets web &amp; data, pour <span class="text-ash">apprendre et progresser.</span></h2>
+            </div>
+         </div>
+
+         <div class="overflow-hidden mt-9 lg:mt-12">
+            <div class="flex items-center gap-5 w-max animate-marquee-slow hover:[animation-play-state:paused]">
+               <!-- Moitié 1 (répétée pour couvrir la largeur) -->
+               <a href="projets/suivi-performances.html" class="gcard"><img src="assets/img/fond-exp-fftri.webp" alt="Suivi des performances" class="gimg"><div class="gshade"></div><div class="gcap"><p class="gtitle">Suivi des performances</p><p class="gsub">FFTri · Django</p></div></a>
+               <a href="projets/cartographie-randonnees.html" class="gcard"><img src="assets/img/randonnee-background.webp" alt="Cartographie des randonnées" class="gimg"><div class="gshade"></div><div class="gcap"><p class="gtitle">Cartographie des randonnées</p><p class="gsub">Full stack · SVG</p></div></a>
+               <a href="projets/accidents-velo.html" class="gcard"><img src="assets/img/accident-velo.webp" alt="Accidents à vélo" class="gimg"><div class="gshade"></div><div class="gcap"><p class="gtitle">Accidents à vélo</p><p class="gsub">Data · SIG</p></div></a>
+               <a href="projets/stationnement-carcassonne.html" class="gcard"><img src="assets/img/projet-stationnement.jpg" alt="Stationnement de Carcassonne" class="gimg"><div class="gshade"></div><div class="gcap"><p class="gtitle">Stationnement de Carcassonne</p><p class="gsub">Full stack · SIG</p></div></a>
+               <a href="projets/migration-postgresql-mongodb.html" class="gcard"><img src="assets/img/data-migration.jpg" alt="Migration PostgreSQL / MongoDB" class="gimg"><div class="gshade"></div><div class="gcap"><p class="gtitle">Migration PostgreSQL / MongoDB</p><p class="gsub">Python · ETL</p></div></a>
+               <a href="projets/suivi-performances.html" class="gcard"><img src="assets/img/fond-exp-fftri.webp" alt="Suivi des performances" class="gimg"><div class="gshade"></div><div class="gcap"><p class="gtitle">Suivi des performances</p><p class="gsub">FFTri · Django</p></div></a>
+               <a href="projets/cartographie-randonnees.html" class="gcard"><img src="assets/img/randonnee-background.webp" alt="Cartographie des randonnées" class="gimg"><div class="gshade"></div><div class="gcap"><p class="gtitle">Cartographie des randonnées</p><p class="gsub">Full stack · SVG</p></div></a>
+               <a href="projets/accidents-velo.html" class="gcard"><img src="assets/img/accident-velo.webp" alt="Accidents à vélo" class="gimg"><div class="gshade"></div><div class="gcap"><p class="gtitle">Accidents à vélo</p><p class="gsub">Data · SIG</p></div></a>
+               <a href="projets/stationnement-carcassonne.html" class="gcard"><img src="assets/img/projet-stationnement.jpg" alt="Stationnement de Carcassonne" class="gimg"><div class="gshade"></div><div class="gcap"><p class="gtitle">Stationnement de Carcassonne</p><p class="gsub">Full stack · SIG</p></div></a>
+               <a href="projets/migration-postgresql-mongodb.html" class="gcard"><img src="assets/img/data-migration.jpg" alt="Migration PostgreSQL / MongoDB" class="gimg"><div class="gshade"></div><div class="gcap"><p class="gtitle">Migration PostgreSQL / MongoDB</p><p class="gsub">Python · ETL</p></div></a>
+               <a href="projets/suivi-performances.html" class="gcard"><img src="assets/img/fond-exp-fftri.webp" alt="Suivi des performances" class="gimg"><div class="gshade"></div><div class="gcap"><p class="gtitle">Suivi des performances</p><p class="gsub">FFTri · Django</p></div></a>
+               <a href="projets/cartographie-randonnees.html" class="gcard"><img src="assets/img/randonnee-background.webp" alt="Cartographie des randonnées" class="gimg"><div class="gshade"></div><div class="gcap"><p class="gtitle">Cartographie des randonnées</p><p class="gsub">Full stack · SVG</p></div></a>
+               <a href="projets/accidents-velo.html" class="gcard"><img src="assets/img/accident-velo.webp" alt="Accidents à vélo" class="gimg"><div class="gshade"></div><div class="gcap"><p class="gtitle">Accidents à vélo</p><p class="gsub">Data · SIG</p></div></a>
+               <a href="projets/stationnement-carcassonne.html" class="gcard"><img src="assets/img/projet-stationnement.jpg" alt="Stationnement de Carcassonne" class="gimg"><div class="gshade"></div><div class="gcap"><p class="gtitle">Stationnement de Carcassonne</p><p class="gsub">Full stack · SIG</p></div></a>
+               <a href="projets/migration-postgresql-mongodb.html" class="gcard"><img src="assets/img/data-migration.jpg" alt="Migration PostgreSQL / MongoDB" class="gimg"><div class="gshade"></div><div class="gcap"><p class="gtitle">Migration PostgreSQL / MongoDB</p><p class="gsub">Python · ETL</p></div></a>
+               <!-- Moitié 2 (duplicata pour la boucle) -->
+               <a href="projets/suivi-performances.html" aria-hidden="true" class="gcard"><img src="assets/img/fond-exp-fftri.webp" alt="" class="gimg"><div class="gshade"></div><div class="gcap"><p class="gtitle">Suivi des performances</p><p class="gsub">FFTri · Django</p></div></a>
+               <a href="projets/cartographie-randonnees.html" aria-hidden="true" class="gcard"><img src="assets/img/randonnee-background.webp" alt="" class="gimg"><div class="gshade"></div><div class="gcap"><p class="gtitle">Cartographie des randonnées</p><p class="gsub">Full stack · SVG</p></div></a>
+               <a href="projets/accidents-velo.html" aria-hidden="true" class="gcard"><img src="assets/img/accident-velo.webp" alt="" class="gimg"><div class="gshade"></div><div class="gcap"><p class="gtitle">Accidents à vélo</p><p class="gsub">Data · SIG</p></div></a>
+               <a href="projets/stationnement-carcassonne.html" aria-hidden="true" class="gcard"><img src="assets/img/projet-stationnement.jpg" alt="" class="gimg"><div class="gshade"></div><div class="gcap"><p class="gtitle">Stationnement de Carcassonne</p><p class="gsub">Full stack · SIG</p></div></a>
+               <a href="projets/migration-postgresql-mongodb.html" aria-hidden="true" class="gcard"><img src="assets/img/data-migration.jpg" alt="" class="gimg"><div class="gshade"></div><div class="gcap"><p class="gtitle">Migration PostgreSQL / MongoDB</p><p class="gsub">Python · ETL</p></div></a>
+               <a href="projets/suivi-performances.html" aria-hidden="true" class="gcard"><img src="assets/img/fond-exp-fftri.webp" alt="" class="gimg"><div class="gshade"></div><div class="gcap"><p class="gtitle">Suivi des performances</p><p class="gsub">FFTri · Django</p></div></a>
+               <a href="projets/cartographie-randonnees.html" aria-hidden="true" class="gcard"><img src="assets/img/randonnee-background.webp" alt="" class="gimg"><div class="gshade"></div><div class="gcap"><p class="gtitle">Cartographie des randonnées</p><p class="gsub">Full stack · SVG</p></div></a>
+               <a href="projets/accidents-velo.html" aria-hidden="true" class="gcard"><img src="assets/img/accident-velo.webp" alt="" class="gimg"><div class="gshade"></div><div class="gcap"><p class="gtitle">Accidents à vélo</p><p class="gsub">Data · SIG</p></div></a>
+               <a href="projets/stationnement-carcassonne.html" aria-hidden="true" class="gcard"><img src="assets/img/projet-stationnement.jpg" alt="" class="gimg"><div class="gshade"></div><div class="gcap"><p class="gtitle">Stationnement de Carcassonne</p><p class="gsub">Full stack · SIG</p></div></a>
+               <a href="projets/migration-postgresql-mongodb.html" aria-hidden="true" class="gcard"><img src="assets/img/data-migration.jpg" alt="" class="gimg"><div class="gshade"></div><div class="gcap"><p class="gtitle">Migration PostgreSQL / MongoDB</p><p class="gsub">Python · ETL</p></div></a>
+               <a href="projets/suivi-performances.html" aria-hidden="true" class="gcard"><img src="assets/img/fond-exp-fftri.webp" alt="" class="gimg"><div class="gshade"></div><div class="gcap"><p class="gtitle">Suivi des performances</p><p class="gsub">FFTri · Django</p></div></a>
+               <a href="projets/cartographie-randonnees.html" aria-hidden="true" class="gcard"><img src="assets/img/randonnee-background.webp" alt="" class="gimg"><div class="gshade"></div><div class="gcap"><p class="gtitle">Cartographie des randonnées</p><p class="gsub">Full stack · SVG</p></div></a>
+               <a href="projets/accidents-velo.html" aria-hidden="true" class="gcard"><img src="assets/img/accident-velo.webp" alt="" class="gimg"><div class="gshade"></div><div class="gcap"><p class="gtitle">Accidents à vélo</p><p class="gsub">Data · SIG</p></div></a>
+               <a href="projets/stationnement-carcassonne.html" aria-hidden="true" class="gcard"><img src="assets/img/projet-stationnement.jpg" alt="" class="gimg"><div class="gshade"></div><div class="gcap"><p class="gtitle">Stationnement de Carcassonne</p><p class="gsub">Full stack · SIG</p></div></a>
+               <a href="projets/migration-postgresql-mongodb.html" aria-hidden="true" class="gcard"><img src="assets/img/data-migration.jpg" alt="" class="gimg"><div class="gshade"></div><div class="gcap"><p class="gtitle">Migration PostgreSQL / MongoDB</p><p class="gsub">Python · ETL</p></div></a>
+            </div>
+         </div></section>
+
+      <!--==================== EXPERIENCE / PARCOURS ====================-->
+      <section class="bg-paper text-ink scroll-mt-24 pt-16 pb-20 lg:pt-24 lg:pb-28" id="formation">
+         <div class="container text-center max-w-[760px] mx-auto mb-6 lg:mb-10">
+            <p class="eyebrow text-grad text-[.72rem] font-semibold uppercase mb-4">Parcours</p>
+            <h2 class="font-display font-semibold tracking-[-.03em] text-[clamp(1.9rem,5vw,3.2rem)] leading-[1.06] mb-5">Du sport au développement<span class="text-ash">.</span></h2>
+            <p class="text-ash text-[1.02rem] leading-relaxed">Un parcours qui m'a conduit de l'analyse de la performance au développement full stack, avec la donnée comme fil rouge.</p>
+         </div>
+
+         <div class="container lg:hidden">
+            <div class="tl max-w-[620px]">
+               <div class="tl-item grid grid-cols-[64px_minmax(0,1fr)] gap-x-5 relative pb-9">
+                  <div class="relative">
+                     <div class="tl-node absolute top-0 left-1/2 -translate-x-1/2 z-10 w-16 h-16 rounded-full bg-white border border-line shadow-[0_6px_20px_-8px_rgba(0,0,0,.25)] grid place-items-center overflow-hidden"><img src="assets/img/upjv.png" alt="UPJV" class="w-full h-full object-contain"></div>
+                  <span class="tl-line"></span>
+                  </div>
+                  <div class="min-w-0 pt-1">
+                     <div class="flex flex-wrap items-center gap-x-3 gap-y-1 mb-3"><h3 class="text-[1.15rem] font-bold leading-none">UPJV</h3><span class="inline-flex items-center rounded-full border border-line px-2.5 py-0.5 text-[.7rem] font-mono text-ash">2021</span></div>
+                     <div class="card-light p-5"><h4 class="text-[1rem] font-semibold mb-2">Licence STAPS</h4><p class="text-ash text-[.88rem] leading-relaxed">Entraînement sportif. Évaluation et analyse de la performance, application des sciences de l'exercice et méthodologie de recherche appliquée au sport.</p><div class="flex flex-wrap gap-x-5 gap-y-2 mt-3"><a href="assets/pdf/licence-formation.pdf" target="_blank" class="experience_link group"><i class="ri-eye-line text-base transition-transform duration-300 group-hover:translate-x-[.2rem]"></i><span>Fiche formation</span></a></div></div>
+                  </div>
+               </div>
+               <div class="tl-item grid grid-cols-[64px_minmax(0,1fr)] gap-x-5 relative pb-9">
+                  <div class="relative">
+                     <div class="tl-node absolute top-0 left-1/2 -translate-x-1/2 z-10 w-16 h-16 rounded-full bg-white border border-line shadow-[0_6px_20px_-8px_rgba(0,0,0,.25)] grid place-items-center overflow-hidden"><img src="assets/img/upjv.png" alt="UPJV" class="w-full h-full object-contain"></div>
+                  <span class="tl-line"></span>
+                  </div>
+                  <div class="min-w-0 pt-1">
+                     <div class="flex flex-wrap items-center gap-x-3 gap-y-1 mb-3"><h3 class="text-[1.15rem] font-bold leading-none">UPJV</h3><span class="inline-flex items-center rounded-full border border-line px-2.5 py-0.5 text-[.7rem] font-mono text-ash">2023</span></div>
+                     <div class="card-light p-5"><h4 class="text-[1rem] font-semibold mb-2">Master EOPS</h4><p class="text-ash text-[.88rem] leading-relaxed">Réathlétisation, récupération &amp; prévention de la blessure. Évaluation de la performance sportive, analyse de données physiologiques et méthodologie scientifique.</p><div class="flex flex-wrap gap-x-5 gap-y-2 mt-3"><a href="assets/pdf/master-formation.pdf" target="_blank" class="experience_link group"><i class="ri-eye-line text-base transition-transform duration-300 group-hover:translate-x-[.2rem]"></i><span>Fiche formation</span></a>
+                        <a href="assets/pdf/memoirem2.pdf" target="_blank" class="experience_link group"><i class="ri-file-text-line text-base transition-transform duration-300 group-hover:translate-x-[.2rem]"></i><span>Mémoire M2</span></a>
+                        <a href="assets/pdf/memoirem1.pdf" target="_blank" class="experience_link group"><i class="ri-file-text-line text-base transition-transform duration-300 group-hover:translate-x-[.2rem]"></i><span>Mémoire M1</span></a></div></div>
+                  </div>
+               </div>
+               <div class="tl-item grid grid-cols-[64px_minmax(0,1fr)] gap-x-5 relative pb-9">
+                  <div class="relative">
+                     <div class="tl-node absolute top-0 left-1/2 -translate-x-1/2 z-10 w-16 h-16 rounded-full bg-white border border-line shadow-[0_6px_20px_-8px_rgba(0,0,0,.25)] grid place-items-center overflow-hidden"><img src="assets/img/upvd.png" alt="UPVD" class="w-full h-full object-contain"></div>
+                  <span class="tl-line"></span>
+                  </div>
+                  <div class="min-w-0 pt-1">
+                     <div class="flex flex-wrap items-center gap-x-3 gap-y-1 mb-3"><h3 class="text-[1.15rem] font-bold leading-none">UPVD</h3><span class="inline-flex items-center rounded-full border border-line px-2.5 py-0.5 text-[.7rem] font-mono text-ash">2025</span></div>
+                     <div class="card-light p-5"><h4 class="text-[1rem] font-semibold mb-2">Diplôme Universitaire</h4><p class="text-ash text-[.88rem] leading-relaxed">Data Analysis &amp; Tools Applied to Sports. Collecte, nettoyage et exploitation de données sportives avec R et Tableau pour produire des visualisations et indicateurs de performance.</p><div class="flex flex-wrap gap-x-5 gap-y-2 mt-3"><a href="assets/pdf/du-formation.pdf" target="_blank" class="experience_link group"><i class="ri-eye-line text-base transition-transform duration-300 group-hover:translate-x-[.2rem]"></i><span>Fiche formation</span></a></div></div>
+                  </div>
+               </div>
+               <div class="tl-item grid grid-cols-[64px_minmax(0,1fr)] gap-x-5 relative pb-9">
+                  <div class="relative">
+                     <div class="tl-node tl-node--current absolute top-0 left-1/2 -translate-x-1/2 z-10 w-16 h-16 rounded-full bg-white border border-line shadow-[0_6px_20px_-8px_rgba(0,0,0,.25)] grid place-items-center overflow-hidden"><img src="assets/img/iut-sd.png" alt="IUT" class="w-full h-full object-contain"></div>
+                  </div>
+                  <div class="min-w-0 pt-1">
+                     <div class="flex flex-wrap items-center gap-x-3 gap-y-1 mb-3"><h3 class="text-[1.15rem] font-bold leading-none">IUT de Carcassonne</h3><span class="inline-flex items-center rounded-full border border-line px-2.5 py-0.5 text-[.7rem] font-mono text-ash">2027 · en cours</span></div>
+                     <div class="card-light p-5"><h4 class="text-[1rem] font-semibold mb-2">BUT Sciences des Données (parcours VCOD)</h4><p class="text-ash text-[.88rem] leading-relaxed">Visualisation &amp; Conception d'Outils Décisionnels : développement d'applications web (HTML, CSS, JS, PHP), bases de données relationnelles et NoSQL (SQL, MongoDB, Neo4j), et conception d'outils d'aide à la décision à partir de la donnée.</p><div class="flex flex-wrap gap-x-5 gap-y-2 mt-3"><a href="assets/pdf/but-formation.pdf" target="_blank" class="experience_link group"><i class="ri-eye-line text-base transition-transform duration-300 group-hover:translate-x-[.2rem]"></i><span>Fiche formation</span></a></div></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="container hidden lg:block">
+            <div class="relative h-[470px] max-w-[1140px] mx-auto">
+               <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1140 470" preserveAspectRatio="none" fill="none" aria-hidden="true">
+               <path d="M 175 360 Q 300 205 420 185" stroke="#c2c3ca" stroke-width="2" stroke-dasharray="2 7" stroke-linecap="round"></path>
+               <path d="M 420 185 Q 545 185 670 350" stroke="#c2c3ca" stroke-width="2" stroke-dasharray="2 7" stroke-linecap="round"></path>
+               <path d="M 670 350 C 720 420 720 200 875 180" stroke="#c2c3ca" stroke-width="2" stroke-dasharray="2 7" stroke-linecap="round"></path>
+               </svg>
+
+            <div class="fp-node group absolute w-[84px] h-[84px] z-30" style="left:15.35%;top:76.6%;margin-left:-42px;margin-top:-42px">
+               <div class="tl-node w-[84px] h-[84px] rounded-full bg-white border border-line shadow-[0_8px_24px_-8px_rgba(0,0,0,.3)] grid place-items-center overflow-hidden cursor-pointer"><img src="assets/img/upjv.png" alt="UPJV" class="w-full h-full object-contain"></div>
+               <div class="fp-label absolute top-full mt-2.5 left-1/2 -translate-x-1/2 text-center whitespace-nowrap pointer-events-none"><p class="font-bold text-[.95rem] leading-none">UPJV</p><p class="text-ash text-[.72rem] font-mono mt-1">2021</p></div>
+               <div class="fp-card bottom-full mb-4 left-0 w-[300px] card-light p-5 text-left"><h4 class="text-[1rem] font-semibold mb-1.5">Licence STAPS</h4><p class="text-ash text-[.86rem] leading-relaxed">Entraînement sportif. Évaluation et analyse de la performance, application des sciences de l'exercice et méthodologie de recherche appliquée au sport.</p><div class="flex flex-wrap gap-x-5 gap-y-1.5 mt-3"><a href="assets/pdf/licence-formation.pdf" target="_blank" class="experience_link group"><i class="ri-eye-line text-base transition-transform duration-300 group-hover:translate-x-[.2rem]"></i><span>Fiche formation</span></a></div></div>
+            </div>
+            <div class="fp-node group absolute w-[84px] h-[84px] z-30" style="left:36.84%;top:39.36%;margin-left:-42px;margin-top:-42px">
+               <div class="tl-node w-[84px] h-[84px] rounded-full bg-white border border-line shadow-[0_8px_24px_-8px_rgba(0,0,0,.3)] grid place-items-center overflow-hidden cursor-pointer"><img src="assets/img/upjv.png" alt="UPJV" class="w-full h-full object-contain"></div>
+               <div class="fp-label absolute top-full mt-2.5 left-1/2 -translate-x-1/2 text-center whitespace-nowrap pointer-events-none"><p class="font-bold text-[.95rem] leading-none">UPJV</p><p class="text-ash text-[.72rem] font-mono mt-1">2023</p></div>
+               <div class="fp-card top-full mt-[58px] left-1/2 -translate-x-1/2 w-[300px] card-light p-5 text-left"><h4 class="text-[1rem] font-semibold mb-1.5">Master EOPS</h4><p class="text-ash text-[.86rem] leading-relaxed">Réathlétisation, récupération &amp; prévention de la blessure. Évaluation de la performance sportive, analyse de données physiologiques et méthodologie scientifique.</p><div class="flex flex-wrap gap-x-5 gap-y-1.5 mt-3"><a href="assets/pdf/master-formation.pdf" target="_blank" class="experience_link group"><i class="ri-eye-line text-base transition-transform duration-300 group-hover:translate-x-[.2rem]"></i><span>Fiche formation</span></a>
+                <a href="assets/pdf/memoirem2.pdf" target="_blank" class="experience_link group"><i class="ri-file-text-line text-base transition-transform duration-300 group-hover:translate-x-[.2rem]"></i><span>Mémoire M2</span></a>
+                <a href="assets/pdf/memoirem1.pdf" target="_blank" class="experience_link group"><i class="ri-file-text-line text-base transition-transform duration-300 group-hover:translate-x-[.2rem]"></i><span>Mémoire M1</span></a></div></div>
+            </div>
+            <div class="fp-node group absolute w-[84px] h-[84px] z-30" style="left:58.77%;top:74.47%;margin-left:-42px;margin-top:-42px">
+               <div class="tl-node w-[84px] h-[84px] rounded-full bg-white border border-line shadow-[0_8px_24px_-8px_rgba(0,0,0,.3)] grid place-items-center overflow-hidden cursor-pointer"><img src="assets/img/upvd.png" alt="UPVD" class="w-full h-full object-contain"></div>
+               <div class="fp-label absolute top-full mt-2.5 left-1/2 -translate-x-1/2 text-center whitespace-nowrap pointer-events-none"><p class="font-bold text-[.95rem] leading-none">UPVD</p><p class="text-ash text-[.72rem] font-mono mt-1">2025</p></div>
+               <div class="fp-card bottom-full mb-4 left-1/2 -translate-x-1/2 w-[300px] card-light p-5 text-left"><h4 class="text-[1rem] font-semibold mb-1.5">Diplôme Universitaire</h4><p class="text-ash text-[.86rem] leading-relaxed">Data Analysis &amp; Tools Applied to Sports. Collecte, nettoyage et exploitation de données sportives avec R et Tableau pour produire des visualisations et indicateurs de performance.</p><div class="flex flex-wrap gap-x-5 gap-y-1.5 mt-3"><a href="assets/pdf/du-formation.pdf" target="_blank" class="experience_link group"><i class="ri-eye-line text-base transition-transform duration-300 group-hover:translate-x-[.2rem]"></i><span>Fiche formation</span></a></div></div>
+            </div>
+            <div class="fp-node group absolute w-[84px] h-[84px] z-30" style="left:76.75%;top:38.3%;margin-left:-42px;margin-top:-42px">
+               <div class="tl-node tl-node--current w-[84px] h-[84px] rounded-full bg-white border border-line shadow-[0_8px_24px_-8px_rgba(0,0,0,.3)] grid place-items-center overflow-hidden cursor-pointer"><img src="assets/img/iut-sd.png" alt="IUT" class="w-full h-full object-contain"></div>
+               <div class="fp-label absolute top-full mt-2.5 left-1/2 -translate-x-1/2 text-center whitespace-nowrap pointer-events-none"><p class="font-bold text-[.95rem] leading-none">IUT de Carcassonne</p><p class="text-ash text-[.72rem] font-mono mt-1">2027 · en cours</p></div>
+               <div class="fp-ico absolute left-[58%] -translate-x-1/2 bottom-[90%] inline-flex items-center px-4 py-2.5 whitespace-nowrap pointer-events-none z-20"><span class="text-[.92rem] font-medium text-[#27272a]">Coup de ❤️ pour le web</span></div>
+               <div class="fp-card top-full mt-[58px] right-0 w-[300px] card-light p-5 text-left"><h4 class="text-[1rem] font-semibold mb-1.5">BUT Sciences des Données (parcours VCOD)</h4><p class="text-ash text-[.86rem] leading-relaxed">Visualisation &amp; Conception d'Outils Décisionnels : développement d'applications web (HTML, CSS, JS, PHP), bases de données relationnelles et NoSQL (SQL, MongoDB, Neo4j), et conception d'outils d'aide à la décision à partir de la donnée.</p><div class="flex flex-wrap gap-x-5 gap-y-1.5 mt-3"><a href="assets/pdf/but-formation.pdf" target="_blank" class="experience_link group"><i class="ri-eye-line text-base transition-transform duration-300 group-hover:translate-x-[.2rem]"></i><span>Fiche formation</span></a></div></div>
+            </div>
+            </div>
+         </div>
+
+      </section>
+
+      <!--==================== PHILOSOPHIE (citation) ====================-->
+      <section class="bg-paper text-ink border-t border-line py-20 lg:py-28" aria-label="Philosophie">
+         <div class="container max-w-[900px] text-center">
+            <blockquote class="font-display font-medium tracking-[-.02em] text-[clamp(1.5rem,3.6vw,2.6rem)] leading-[1.35] max-w-[780px] mx-auto">
+               <span class="text-grad font-semibold">“</span>Ce que l'on apprend ne prend tout son sens qu'<span class="text-grad font-semibold">à l'épreuve du réel</span>.<span class="text-grad font-semibold">”</span>
+            </blockquote>
+         </div>
+      </section>
+
+      <!--==================== EXPÉRIENCES (carrousel plein écran) ====================-->
+      <section class="xp relative bg-night text-cloud h-[100svh] min-h-[660px] overflow-hidden" id="experience" aria-label="Expériences professionnelles">
+
+         <article class="xp-slide is-active">
+            <img src="assets/img/image_courte_distance.webp" alt="" class="xp-photo">
+            <div class="xp-overlay"></div>
+            <div class="relative z-10 h-full flex items-center">
+               <div class="px-6 lg:px-12 w-full max-w-[1180px] mx-auto pt-20 pb-48 lg:pb-52">
+                  <p class="text-g1 text-[.8rem] font-medium uppercase tracking-[.12em] mb-5">Full Stack & Data Engineer · Alternant</p>
+                  <h2 class="font-display font-semibold tracking-[-.04em] leading-[.92] text-[clamp(2.6rem,8vw,5.5rem)] mb-6 max-w-[780px]">Fédération Française de Triathlon</h2>
+                  <p class="text-fog text-[1.02rem] lg:text-[1.12rem] leading-relaxed max-w-[600px] mb-7 font-light">Application Django (MVT, ORM, authentification et gestion des rôles) pour l'analyse des résultats internationaux. Pipeline Extract-Transform-Load depuis l'API World Triathlon et entrepôt en architecture médaillon (SQL Server), versionné Git / GitLab.</p>
+                  <div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-[.85rem] font-medium uppercase tracking-[.1em] text-fog">
+                     <span>+Depuis sept. 2025</span>
+                     <span>+France · FFTri / ANS</span>
+                  </div>
+                  <div class="mt-8">
+                     <a href="projets/suivi-performances.html" class="btn btn-grad !py-2.5 !px-5 text-[.88rem]">Voir le projet<i class="ri-arrow-right-up-line ml-1"></i></a>
+                  </div>
+               </div>
+            </div>
+         </article>
+
+         <article class="xp-slide">
+            <img src="assets/img/background-corporategym.jpg" alt="" class="xp-photo">
+            <div class="xp-overlay"></div>
+            <div class="relative z-10 h-full flex items-center">
+               <div class="px-6 lg:px-12 w-full max-w-[1180px] mx-auto pt-20 pb-48 lg:pb-52">
+                  <p class="text-g1 text-[.8rem] font-medium uppercase tracking-[.12em] mb-5">Auto-entrepreneur · Prévention santé</p>
+                  <h2 class="font-display font-semibold tracking-[-.04em] leading-[.92] text-[clamp(2.6rem,8vw,5.5rem)] mb-6 max-w-[780px]">The Corporate Gym</h2>
+                  <p class="text-fog text-[1.02rem] lg:text-[1.12rem] leading-relaxed max-w-[600px] mb-7 font-light">Chargé de prévention santé et bien-être au travail. Conception et animation de séances visant la prévention des TMS, adaptées aux profils des collaborateurs.</p>
+                  <div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-[.85rem] font-medium uppercase tracking-[.1em] text-fog">
+                     <span>+Jan. 2024 - Août 2025</span>
+                     <span>+France</span>
+                  </div>
+               </div>
+            </div>
+         </article>
+
+         <article class="xp-slide">
+            <img src="assets/img/background-apere.jpg" alt="" class="xp-photo">
+            <div class="xp-overlay"></div>
+            <div class="relative z-10 h-full flex items-center">
+               <div class="px-6 lg:px-12 w-full max-w-[1180px] mx-auto pt-20 pb-48 lg:pb-52">
+                  <p class="text-g1 text-[.8rem] font-medium uppercase tracking-[.12em] mb-5">Sport Scientist · Stage</p>
+                  <h2 class="font-display font-semibold tracking-[-.04em] leading-[.92] text-[clamp(2.6rem,8vw,5.5rem)] mb-6 max-w-[780px]">Laboratoire APERE</h2>
+                  <p class="text-fog text-[1.02rem] lg:text-[1.12rem] leading-relaxed max-w-[600px] mb-7 font-light">Analyse non-linéaire de la variabilité de la fréquence cardiaque et de la VO₂ max. Traitement et interprétation de données physiologiques, rédaction d'un mémoire sous forme d'article scientifique.</p>
+                  <div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-[.85rem] font-medium uppercase tracking-[.1em] text-fog">
+                     <span>+2023 - 2024</span>
+                     <span>+France</span>
+                  </div>
+               </div>
+            </div>
+         </article>
+
+         <article class="xp-slide">
+            <img src="assets/img/background-ringolympique.jpg" alt="" class="xp-photo">
+            <div class="xp-overlay"></div>
+            <div class="relative z-10 h-full flex items-center">
+               <div class="px-6 lg:px-12 w-full max-w-[1180px] mx-auto pt-20 pb-48 lg:pb-52">
+                  <p class="text-g1 text-[.8rem] font-medium uppercase tracking-[.12em] mb-5">Préparateur physique</p>
+                  <h2 class="font-display font-semibold tracking-[-.04em] leading-[.92] text-[clamp(2.6rem,8vw,5.5rem)] mb-6 max-w-[780px]">Ring Olympique</h2>
+                  <p class="text-fog text-[1.02rem] lg:text-[1.12rem] leading-relaxed max-w-[600px] mb-7 font-light">Élaboration de programmes d'entraînement individualisés, suivi quantitatif des performances et protocoles de prévention des blessures pour des boxeurs.</p>
+                  <div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-[.85rem] font-medium uppercase tracking-[.1em] text-fog">
+                     <span>+Août 2021 - Août 2023</span>
+                     <span>+Compiègne, France</span>
+                  </div>
+               </div>
+            </div>
+         </article>
+
+         <!-- Compteur -->
+         <div class="absolute top-6 right-6 lg:top-8 lg:right-12 z-20 font-mono text-[.8rem] text-fog"><span class="xp-counter">01</span> / 04</div>
+
+         <!-- Contrôles + progression + vignettes -->
+         <div class="absolute inset-x-0 bottom-0 z-20 px-6 lg:px-12 pb-7 lg:pb-9">
+            <div class="max-w-[1180px] mx-auto flex items-end justify-between gap-6">
+               <div class="flex items-center gap-5">
+                  <div class="flex items-center gap-3">
+                     <button class="xp-prev w-11 h-11 rounded-full border border-edge grid place-items-center text-cloud hover:bg-white/10 transition-colors" aria-label="Expérience précédente"><i class="ri-arrow-left-line text-lg"></i></button>
+                     <button class="xp-next w-11 h-11 rounded-full border border-edge grid place-items-center text-cloud hover:bg-white/10 transition-colors" aria-label="Expérience suivante"><i class="ri-arrow-right-line text-lg"></i></button>
+                  </div>
+                  <div class="hidden sd:flex items-center gap-3 text-fog font-mono text-[.78rem]">
+                     <span class="xp-counter2">01</span>
+                     <span class="block w-24 lg:w-40 h-px bg-edge relative overflow-hidden"><span class="xp-bar absolute inset-y-0 left-0 bg-g1" style="width:25%"></span></span>
+                     <span>04</span>
+                  </div>
+               </div>
+               <div class="xp-thumbs hidden lg:flex items-end">
+                  <button class="xp-thumb xp-thumb--accent relative w-[200px] h-[124px] rounded-xl overflow-hidden border border-edge shrink-0" data-xp="0">
+                     <img src="assets/img/fond-exp-fftri.webp" alt="" class="absolute inset-0 w-full h-full object-cover">
+                     <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/10"></div>
+                     <div class="absolute bottom-0 left-0 p-2.5 text-left"><p class="text-[.62rem] text-fog font-mono uppercase leading-tight mb-0.5">Alternant</p><p class="text-[.9rem] font-semibold text-cloud leading-tight">FFTri</p></div>
+                  </button>
+                  <button class="xp-thumb xp-thumb--accent relative w-[200px] h-[124px] rounded-xl overflow-hidden border border-edge shrink-0" data-xp="1">
+                     <img src="assets/img/background-corporategym.jpg" alt="" class="absolute inset-0 w-full h-full object-cover">
+                     <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/10"></div>
+                     <div class="absolute bottom-0 left-0 p-2.5 text-left"><p class="text-[.62rem] text-fog font-mono uppercase leading-tight mb-0.5">Auto-entrepreneur</p><p class="text-[.9rem] font-semibold text-cloud leading-tight">The Corporate Gym</p></div>
+                  </button>
+                  <button class="xp-thumb xp-thumb--accent relative w-[200px] h-[124px] rounded-xl overflow-hidden border border-edge shrink-0" data-xp="2">
+                     <img src="assets/img/background-apere.jpg" alt="" class="absolute inset-0 w-full h-full object-cover">
+                     <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/10"></div>
+                     <div class="absolute bottom-0 left-0 p-2.5 text-left"><p class="text-[.62rem] text-fog font-mono uppercase leading-tight mb-0.5">Stagiaire</p><p class="text-[.9rem] font-semibold text-cloud leading-tight">APERE</p></div>
+                  </button>
+                  <button class="xp-thumb xp-thumb--accent relative w-[200px] h-[124px] rounded-xl overflow-hidden border border-edge shrink-0" data-xp="3">
+                     <img src="assets/img/background-ringolympique.jpg" alt="" class="absolute inset-0 w-full h-full object-cover">
+                     <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/10"></div>
+                     <div class="absolute bottom-0 left-0 p-2.5 text-left"><p class="text-[.62rem] text-fog font-mono uppercase leading-tight mb-0.5">Préparateur</p><p class="text-[.9rem] font-semibold text-cloud leading-tight">Ring Olympique</p></div>
+                  </button>
+               </div>
+            </div>
+         </div>
+      </section>
+
+   </main>
+
+   <!--==================== FOOTER ====================-->
+   <footer class="relative overflow-hidden bg-night border-t border-edge pt-16 pb-14">
+      <div aria-hidden="true" class="dash-field pointer-events-none absolute inset-x-0 bottom-0 h-[240px] -z-10 opacity-40 bg-[radial-gradient(70%_120%_at_50%_100%,#ff7a1a_0%,#ff2d55_32%,transparent_68%)]"></div>
+
+      <div class="container flex flex-col items-center gap-y-7">
+         <a href="#home" class="font-bold text-[1.6rem] tracking-tight">Johan<span class="text-grad"> TASSART</span></a>
+         <ul class="flex items-center gap-x-6 sd:gap-x-9 text-[.9rem]">
+            <li><a href="#home" class="text-fog transition-colors duration-[.3s] hover:text-cloud">Accueil</a></li>
+            <li><a href="#competences" class="text-fog transition-colors duration-[.3s] hover:text-cloud">Compétences</a></li>
+            <li><a href="#projects" class="text-fog transition-colors duration-[.3s] hover:text-cloud">Projets</a></li>
+            <li><a href="#formation" class="text-fog transition-colors duration-[.3s] hover:text-cloud">Formations</a></li>
+            <li><a href="#experience" class="text-fog transition-colors duration-[.3s] hover:text-cloud">Expériences</a></li>
+         </ul>
+         <div class="flex items-center gap-x-3">
+            <a href="https://www.linkedin.com/in/johan-tassart-39744821a/" target="_blank" class="w-10 h-10 border border-edge text-cloud text-xl rounded-full grid place-items-center transition-colors hover:bg-white hover:text-night" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://gitlab.com/JohanTASSART" target="_blank" class="w-10 h-10 border border-edge text-cloud text-xl rounded-full grid place-items-center transition-colors hover:bg-white hover:text-night" aria-label="GitLab"><i class="fa-brands fa-gitlab"></i></a>
+            <a href="https://coddy.tech/user/aKT2mEdOvWOMSBfDnumaO4ARbiA2" target="_blank" class="w-10 h-10 border border-edge rounded-full grid place-items-center transition-colors hover:bg-white" aria-label="Coddy"><img src="assets/img/coddy%20tech.svg" alt="Coddy" class="h-6 w-6 object-contain"></a>
+         </div>
+         <span class="block mt-4 text-center text-[.82rem] text-fog">Portfolio · Johan TASSART</span>
+      </div>
+   </footer>
+
+   <!--========== SCROLL UP ==========-->
+   <a href="#home" class="scrollup fixed right-4 xl:right-16 -bottom-1/2 bg-panel border border-edge inline-flex p-2 text-cloud text-xl rounded-[.75rem] shadow-[0_8px_24px_rgba(0,0,0,.5)] z-10 [transition:bottom_.4s,transform_.4s] hover:-translate-y-2" id="scroll-up">
+      <i class="ri-arrow-up-line"></i>
+   </a>
+
+   <!--=============== MAIN JS ===============-->
+   <script src="assets/js/main.js?v=30"></script>
+
+</body>
+</html>

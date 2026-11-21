@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" type="image/png" href="../assets/img/favicon.ico">
+   <link rel="apple-touch-icon" href="../assets/img/favicon.ico">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+   <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+   <script src="../assets/js/tailwind.config.js"></script>
+   <link rel="stylesheet" href="../assets/css/styles.css?v=50">
+   <title>Accidents à vélo · Data / SIG · Johan TASSART</title>
+</head>
+<body class="bg-paper text-ink font-sans antialiased text-[.95rem] lg:text-base">
+
+   <!--==================== BARRE STICKY (claire) ====================-->
+   <header class="fixed top-0 inset-x-0 z-50 bg-paper/85 backdrop-blur-[14px] border-b border-line">
+      <div class="container flex items-center justify-between h-14">
+         <a href="../index.html" class="flex items-center gap-2.5 font-bold tracking-tight text-[1.05rem]"><img src="../assets/img/image_portfolio.png" alt="" class="w-7 h-7 object-contain"><span>Johan <span class="text-ash">TASSART</span></span></a>
+         <a href="../index.html#projects" class="inline-flex items-center gap-2 rounded-full border border-line px-4 py-2 text-[.85rem] font-medium text-ink hover:bg-black/[.04] transition-colors"><i class="ri-arrow-left-line"></i> Retour aux projets</a>
+      </div>
+   </header>
+
+   <main class="overflow-hidden">
+
+      <!--==================== HERO BANNIÈRE (image + titre superposé) ====================-->
+      <section id="top" class="relative overflow-hidden h-[56vh] min-h-[400px] lg:h-[62vh] flex items-end mt-14">
+         <img src="../assets/img/accident-velo.webp" alt="Cartographie des accidents de vélo" class="absolute inset-0 w-full h-full object-cover">
+         <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/15"></div>
+         <div class="container relative pb-9 lg:pb-12">
+            <div class="flex flex-wrap gap-2 mb-5">
+               <span class="inline-flex items-center rounded-full bg-white/15 backdrop-blur-sm border border-white/25 px-3 py-1 text-[.64rem] font-semibold uppercase tracking-[.1em] text-white">Projet BUT · SAE</span>
+               <span class="inline-flex items-center rounded-full bg-white/15 backdrop-blur-sm border border-white/25 px-3 py-1 text-[.64rem] font-semibold uppercase tracking-[.1em] text-white">Python / Tkinter</span>
+               <span class="inline-flex items-center rounded-full bg-white/15 backdrop-blur-sm border border-white/25 px-3 py-1 text-[.64rem] font-semibold uppercase tracking-[.1em] text-white">Cartographie</span>
+            </div>
+            <h1 class="font-display font-semibold tracking-[-.04em] leading-[.95] text-[clamp(2.2rem,5.5vw,4.2rem)] text-white max-w-[900px] mb-4">Accidents à vélo</h1>
+            <p class="text-white/75 text-[1.05rem] lg:text-[1.15rem] leading-relaxed max-w-[640px] font-light">Application de bureau en Python pour cartographier les accidents de vélo en France : carte interactive, données chargées depuis un CSV ou une base PostgreSQL, et marqueurs colorés selon la gravité.</p>
+         </div>
+      </section>
+
+      <!--==================== SPECS / FAITS CLÉS ====================-->
+      <section class="bg-paper border-b border-line">
+         <div class="container grid grid-cols-2 sd:grid-cols-4 gap-y-6 py-7 lg:py-9">
+            <div><p class="font-display font-bold text-[1.25rem] lg:text-[1.45rem] leading-none">Python</p><p class="text-ash text-[.76rem] mt-1.5 uppercase tracking-[.08em] font-mono">Application desktop</p></div>
+            <div><p class="font-display font-bold text-[1.25rem] lg:text-[1.45rem] leading-none">Folium</p><p class="text-ash text-[.76rem] mt-1.5 uppercase tracking-[.08em] font-mono">Carte Leaflet</p></div>
+            <div><p class="font-display font-bold text-[1.25rem] lg:text-[1.45rem] leading-none">PostgreSQL</p><p class="text-ash text-[.76rem] mt-1.5 uppercase tracking-[.08em] font-mono">Base de données</p></div>
+            <div><p class="font-display font-bold text-[1.25rem] lg:text-[1.45rem] leading-none">BAAC</p><p class="text-ash text-[.76rem] mt-1.5 uppercase tracking-[.08em] font-mono">Données vélo</p></div>
+         </div>
+      </section>
+
+      <!--==================== VIDÉO (démonstration) ====================-->
+      <section class="bg-paper pt-12 lg:pt-16">
+         <div class="container">
+            <div class="mb-6">
+               <p class="eyebrow text-grad text-[.72rem] font-semibold uppercase mb-2">Démonstration</p>
+               <h2 class="font-display font-semibold tracking-[-.02em] text-[1.5rem] lg:text-[1.9rem]">Vidéo du projet</h2>
+               <p class="text-ash text-[1rem] leading-relaxed mt-2 max-w-[680px]">Aperçu de l'application : chargement des accidents, affichage sur la carte et navigation dans les points colorés par gravité.</p>
+            </div>
+            <div class="rounded-2xl overflow-hidden border border-line bg-black shadow-[0_20px_60px_-30px_rgba(0,0,0,.5)] max-w-[940px] mx-auto lg:mx-0">
+               <video controls preload="metadata" poster="../assets/img/accident-velo.webp" class="w-full aspect-video object-contain bg-black">
+                  <source src="../assets/video/video-accidentVelo.mp4" type="video/mp4">
+                  Votre navigateur ne peut pas lire cette vidéo.
+               </video>
+            </div>
+         </div>
+      </section>
+
+      <!--==================== PROBLÈME / SOLUTION / IMPACT ====================-->
+      <section class="bg-paper pt-12 lg:pt-16">
+         <div class="container grid gap-5 md:grid-cols-3">
+            <div class="card-light p-6">
+               <div class="w-10 h-10 rounded-xl bg-g2/10 grid place-items-center mb-4"><i class="ri-error-warning-line text-g2 text-xl"></i></div>
+               <p class="text-[.72rem] font-semibold uppercase tracking-[.1em] text-ash mb-2">Problème</p>
+               <p class="text-ink/80 text-[.95rem] leading-relaxed">Comprendre où et dans quelles circonstances surviennent les accidents de vélo en France pour appuyer la prévention.</p>
+            </div>
+            <div class="card-light p-6">
+               <div class="w-10 h-10 rounded-xl bg-g1/10 grid place-items-center mb-4"><i class="ri-lightbulb-flash-line text-g1 text-xl"></i></div>
+               <p class="text-[.72rem] font-semibold uppercase tracking-[.1em] text-ash mb-2">Solution</p>
+               <p class="text-ink/80 text-[.95rem] leading-relaxed">Une application Python qui charge les accidents (depuis un CSV ou PostgreSQL) et les affiche sur une carte interactive, regroupés par zone et colorés selon leur gravité.</p>
+            </div>
+            <div class="card-light p-6">
+               <div class="w-10 h-10 rounded-xl bg-emerald-500/10 grid place-items-center mb-4"><i class="ri-line-chart-line text-emerald-600 text-xl"></i></div>
+               <p class="text-[.72rem] font-semibold uppercase tracking-[.1em] text-ash mb-2">Impact</p>
+               <p class="text-ink/80 text-[.95rem] leading-relaxed">Une lecture géographique des accidents qui fait ressortir les zones de concentration et les facteurs à risque.</p>
+            </div>
+         </div>
+      </section>
+
+      <!--==================== CONTENU : détail central + sidebar ====================-->
+      <section class="bg-paper pt-12 pb-20 lg:pt-16 lg:pb-28">
+         <div class="container grid gap-x-12 gap-y-12 lg:grid-cols-[minmax(0,1fr)_320px]">
+
+            <!-- Détail central -->
+            <div class="flex flex-col gap-y-10 lg:gap-y-12 min-w-0">
+               <div>
+                  <h2 class="font-display font-semibold tracking-[-.02em] text-[1.5rem] lg:text-[1.75rem] mb-4">À propos du projet</h2>
+                  <p class="text-ash text-[1rem] leading-relaxed">Projet de BUT (SAE VCOD), réalisé en binôme : une application de bureau pour explorer géographiquement les accidents de vélo en France. L'idée est de charger les données d'accidents, de les cartographier et de les parcourir visuellement pour faire ressortir les zones et les circonstances à risque.</p>
+               </div>
+               <div>
+                  <p class="eyebrow text-grad text-[.72rem] font-semibold uppercase mb-3">Données</p>
+                  <p class="text-ash text-[1rem] leading-relaxed mb-4">Jeu de données issu du fichier BAAC (Bulletin d'Analyse des Accidents Corporels de la circulation), centré sur les cyclistes : date et heure, localisation (latitude, longitude, département, commune), gravité, type de collision, point de choc et profil de la victime (sexe, âge). Les accidents se chargent depuis un CSV ou depuis une base PostgreSQL.</p>
+                  <div class="flex flex-wrap gap-2"><span class="soft-chip-light">BAAC</span><span class="soft-chip-light">CSV</span><span class="soft-chip-light">PostgreSQL</span><span class="soft-chip-light">Géolocalisation</span></div>
+               </div>
+               <div>
+                  <p class="eyebrow text-grad text-[.72rem] font-semibold uppercase mb-3">Démarche technique</p>
+                  <p class="text-ash text-[1rem] leading-relaxed">Application de bureau en Python (Tkinter) qui embarque un navigateur Chromium (CEF Python) pour afficher une carte Leaflet générée avec Folium. Les accidents sont lus depuis un CSV (lecture et validation maison) ou depuis PostgreSQL via psycopg2, puis placés sur la carte en MarkerCluster pour les regrouper par zone, chacun avec un marqueur coloré par gravité et un popup détaillé aux libellés décodés (gravité, collision, point de choc, victime).</p>
+               </div>
+               <div>
+                  <p class="eyebrow text-grad text-[.72rem] font-semibold uppercase mb-4">Réalisations</p>
+                  <ul class="flex flex-col gap-3">
+                     <li class="flex gap-3 text-ash text-[1rem] leading-relaxed"><i class="ri-check-line text-g1 text-lg mt-0.5 shrink-0"></i><span>Carte interactive générée avec Folium (Leaflet), avec regroupement des points par zone (MarkerCluster).</span></li>
+                     <li class="flex gap-3 text-ash text-[1rem] leading-relaxed"><i class="ri-check-line text-g1 text-lg mt-0.5 shrink-0"></i><span>Marqueurs colorés par gravité (indemne, blessé léger, hospitalisé, tué) avec légende.</span></li>
+                     <li class="flex gap-3 text-ash text-[1rem] leading-relaxed"><i class="ri-check-line text-g1 text-lg mt-0.5 shrink-0"></i><span>Double source de données : lecture d'un CSV ou connexion à PostgreSQL, avec création de table et import.</span></li>
+                     <li class="flex gap-3 text-ash text-[1rem] leading-relaxed"><i class="ri-check-line text-g1 text-lg mt-0.5 shrink-0"></i><span>Formulaire d'ajout d'un accident avec validation des saisies (date, heure, coordonnées en France).</span></li>
+                     <li class="flex gap-3 text-ash text-[1rem] leading-relaxed"><i class="ri-check-line text-g1 text-lg mt-0.5 shrink-0"></i><span>Popups décodant les codes BAAC en libellés lisibles (gravité, collision, point de choc, victime).</span></li>
+                  </ul>
+               </div>
+               <div>
+                  <p class="eyebrow text-grad text-[.72rem] font-semibold uppercase mb-4">Compétences démontrées</p>
+                  <div class="flex flex-wrap gap-2.5">
+                     <span class="soft-chip-light">Python</span><span class="soft-chip-light">PostgreSQL / SQL</span><span class="soft-chip-light">Cartographie (Folium / Leaflet)</span><span class="soft-chip-light">Interface desktop (Tkinter)</span><span class="soft-chip-light">Validation de données</span>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="flex flex-col gap-4 lg:sticky lg:top-[72px] lg:self-start">
+               <div class="card-light p-5">
+                  <p class="text-[.68rem] font-semibold uppercase tracking-[.1em] text-ash mb-3">Code source</p>
+                  <a href="https://gitlab.com/JohanTASSART/cartographie-des-accidents-de-velo" target="_blank" rel="noopener" class="btn btn-grad w-full !py-2.5 text-[.88rem] inline-flex items-center justify-center gap-2"><i class="fa-brands fa-gitlab"></i> Voir le code</a>
+               </div>
+               <div class="card-light p-5">
+                  <p class="text-[.68rem] font-semibold uppercase tracking-[.1em] text-ash mb-3">Stack</p>
+                  <div class="flex flex-wrap gap-x-4 gap-y-3">
+                     <span class="inline-flex items-center gap-2"><img src="../assets/img/postgre.png" alt="PostgreSQL" class="w-5 h-5 object-contain"><span class="text-[.85rem] font-medium text-ink">PostgreSQL</span></span>
+                     <span class="inline-flex items-center gap-2"><img src="../assets/img/Python.svg" alt="Python" class="w-5 h-5 object-contain"><span class="text-[.85rem] font-medium text-ink">Python</span></span>
+                  </div>
+                  <p class="text-[.72rem] text-ash mt-3">+ Tkinter, Folium / Leaflet, CEF Python</p>
+               </div>
+               <div class="card-light p-5">
+                  <p class="text-[.68rem] font-semibold uppercase tracking-[.1em] text-ash mb-4">Informations</p>
+                  <dl class="flex flex-col gap-y-3 text-[.9rem]">
+                     <div class="flex items-center justify-between gap-4"><dt class="text-ash">Type</dt><dd class="font-medium text-right">Projet BUT · SAE</dd></div>
+                     <div class="flex items-center justify-between gap-4"><dt class="text-ash">Formation</dt><dd class="font-medium text-right">BUT Sciences des Données</dd></div>
+                     <div class="flex items-center justify-between gap-4"><dt class="text-ash">Rôle</dt><dd class="font-medium text-right">Binôme</dd></div>
+                     <div class="flex items-center justify-between gap-4"><dt class="text-ash">Domaine</dt><dd class="font-medium text-right">Cartographie / data</dd></div>
+                  </dl>
+               </div>
+            </aside>
+
+         </div>
+      </section>
+
+      <!--==================== AUTRES PROJETS ====================-->
+      <section class="bg-paper border-t border-line pt-14 pb-20 lg:pt-16 lg:pb-24">
+         <div class="container">
+            <div class="flex items-end justify-between gap-5 mb-8">
+               <h2 class="font-display font-semibold tracking-[-.03em] text-[clamp(1.6rem,3.4vw,2.3rem)]">Autres projets</h2>
+               <a href="../index.html#projects" class="shrink-0 inline-flex items-center gap-2 font-medium text-ink underline decoration-g1 decoration-2 underline-offset-[6px] hover:text-g1 transition-colors text-[.92rem]">Tous les projets</a>
+            </div>
+            <div class="grid gap-5 sd:grid-cols-3">
+               <a href="stationnement-carcassonne.html" class="group relative block rounded-2xl overflow-hidden border border-line aspect-[16/10]">
+                  <img src="../assets/img/projet-stationnement.jpg" alt="Stationnement de Carcassonne" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.05]">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+                  <div class="absolute bottom-0 left-0 p-5">
+                     <p class="text-[.62rem] font-mono uppercase tracking-[.12em] text-g1 mb-1">Full stack · SIG</p>
+                     <p class="text-white font-semibold text-[1.1rem]">Stationnement de Carcassonne</p>
+                  </div>
+               </a>
+               <a href="suivi-performances.html" class="group relative block rounded-2xl overflow-hidden border border-line aspect-[16/10]">
+                  <img src="../assets/img/fond-exp-fftri.webp" alt="Suivi des performances" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.05]">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+                  <div class="absolute bottom-0 left-0 p-5">
+                     <p class="text-[.62rem] font-mono uppercase tracking-[.12em] text-g1 mb-1">FFTri · Django</p>
+                     <p class="text-white font-semibold text-[1.1rem]">Suivi des performances</p>
+                  </div>
+               </a>
+               <a href="cartographie-randonnees.html" class="group relative block rounded-2xl overflow-hidden border border-line aspect-[16/10]">
+                  <img src="../assets/img/randonnee-background.webp" alt="Cartographie des randonnées" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.05]">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+                  <div class="absolute bottom-0 left-0 p-5">
+                     <p class="text-[.62rem] font-mono uppercase tracking-[.12em] text-g1 mb-1">Full stack · SVG</p>
+                     <p class="text-white font-semibold text-[1.1rem]">Cartographie des randonnées</p>
+                  </div>
+               </a>
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <!--==================== FOOTER ====================-->
+   <footer class="relative overflow-hidden bg-night text-cloud border-t border-edge pt-16 pb-14">
+      <div aria-hidden="true" class="dash-field pointer-events-none absolute inset-x-0 bottom-0 h-[240px] -z-10 opacity-40 bg-[radial-gradient(70%_120%_at_50%_100%,#ff7a1a_0%,#ff2d55_32%,transparent_68%)]"></div>
+      <div class="container flex flex-col items-center gap-y-7">
+         <a href="../index.html#home" class="font-bold text-[1.6rem] tracking-tight">Johan<span class="text-grad"> TASSART</span></a>
+         <ul class="flex items-center gap-x-6 sd:gap-x-9 text-[.9rem]">
+            <li><a href="../index.html#home" class="text-fog transition-colors duration-[.3s] hover:text-cloud">Accueil</a></li>
+            <li><a href="../index.html#competences" class="text-fog transition-colors duration-[.3s] hover:text-cloud">Compétences</a></li>
+            <li><a href="../index.html#projects" class="text-fog transition-colors duration-[.3s] hover:text-cloud">Projets</a></li>
+            <li><a href="../index.html#experience" class="text-fog transition-colors duration-[.3s] hover:text-cloud">Parcours</a></li>
+         </ul>
+         <div class="flex items-center gap-x-3">
+            <a href="https://www.linkedin.com/in/johan-tassart-39744821a/" target="_blank" class="w-10 h-10 border border-edge text-cloud text-xl rounded-full grid place-items-center transition-colors hover:bg-white hover:text-night" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://gitlab.com/JohanTASSART" target="_blank" class="w-10 h-10 border border-edge text-cloud text-xl rounded-full grid place-items-center transition-colors hover:bg-white hover:text-night" aria-label="GitLab"><i class="fa-brands fa-gitlab"></i></a>
+            <a href="https://coddy.tech/user/aKT2mEdOvWOMSBfDnumaO4ARbiA2" target="_blank" class="w-10 h-10 border border-edge rounded-full grid place-items-center transition-colors hover:bg-white" aria-label="Coddy"><img src="../assets/img/coddy%20tech.svg" alt="Coddy" class="h-6 w-6 object-contain"></a>
+         </div>
+         <span class="block mt-4 text-center text-[.82rem] text-fog">Portfolio · Johan TASSART</span>
+      </div>
+   </footer>
+
+   <a href="#top" class="scrollup fixed right-4 xl:right-16 -bottom-1/2 bg-white border border-line inline-flex p-2 text-ink text-xl rounded-[.75rem] shadow-[0_8px_24px_rgba(0,0,0,.15)] z-10 [transition:bottom_.4s,transform_.4s] hover:-translate-y-2" id="scroll-up">
+      <i class="ri-arrow-up-line"></i>
+   </a>
+
+   <script src="../assets/js/main.js?v=30"></script>
+</body>
+</html>
